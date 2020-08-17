@@ -89,8 +89,25 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-WSGI_APPLICATION = 'hello_world_apparel.wsgi.application'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+"""
+Email authentication set-up
+"""
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+
+# sets verification email to expire within 24 hours
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_URL = '/accounts/login/'
+
+# after loggin in, redirect to /
+LOGIN_REDIRECT_URL = '/'
+
+WSGI_APPLICATION = 'hello_world_apparel.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
