@@ -5,19 +5,9 @@ html {
 body {
     background: url('/media/background-example.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 14px);
     color: #555;
     font-family: 'Lato';
-}
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0,0,0,0.40);
 }
 
 .shop-now-button {
@@ -34,4 +24,8 @@ body::before {
 .btn-black:focus {
     background: #222;
     color: white;
+}
+
+.text-black {
+    color: #555 !important;
 }
