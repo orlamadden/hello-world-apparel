@@ -3,9 +3,8 @@ html {
 }
 
 body {
-    background: url('/media/background-example.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 14px);
+    background-color: rgb(253, 196, 122);
+    height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
 }
