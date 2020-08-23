@@ -1,3 +1,7 @@
+:root {
+  --orange: rgb(240, 108, 0);
+}
+
 html {
     height: 100%;
 }
@@ -6,7 +10,16 @@ body {
     background-color: rgb(253, 196, 122);
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Lato';
+    font-family: 'Gothic A1', sans-serif;
+}
+
+.divider {
+    height: 4px;
+    background-color: var(--orange);
+}
+
+.website-cta {
+    font-weight: 800;
 }
 
 .shop-now-button {
@@ -27,4 +40,35 @@ body {
 
 .text-black {
     color: #555 !important;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+/* Product listings page */
+
+.price-tag {
+    color: var(--orange);
+    font-weight: 600;
+}
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .header-container {
+        padding-top: 164px;
+    }
 }
