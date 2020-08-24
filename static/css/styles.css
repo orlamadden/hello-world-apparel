@@ -59,6 +59,15 @@ body {
     font-weight: 600;
 }
 
+.product-card {
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.product-card:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
