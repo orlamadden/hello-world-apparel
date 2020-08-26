@@ -19,10 +19,10 @@
 				Popular
 			</a>
 			<div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-				<a href="" class="dropdown-item">T-Shirts</a>
-				<a href="" class="dropdown-item">Mugs</a>
-				<a href="" class="dropdown-item">Pins</a>
-				<a href="" class="dropdown-item">Masks</a>
+				<a href="{% url 'products' %}?category=tshirts" class="dropdown-item">T-Shirts</a>
+				<a href="{% url 'products' %}?category=mugs" class="dropdown-item">Mugs</a>
+				<a href="{% url 'products' %}?category=pins" class="dropdown-item">Pins</a>
+				<a href="{% url 'products' %}?category=masks" class="dropdown-item">Masks</a>
 			</div>
 		</li>
 
