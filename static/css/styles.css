@@ -53,9 +53,9 @@ body {
 }
 
 .dropdown-menu {
-    -webkit-box-shadow: -1px 27px 46px -19px rgba(214,214,214,1);
-    -moz-box-shadow: -1px 27px 46px -19px rgba(214,214,214,1);
-    box-shadow: -1px 27px 46px -19px rgba(214,214,214,1);
+    -webkit-box-shadow: -1px 27px 46px -19px rgba(0,0,0,0.2);
+    -moz-box-shadow: -1px 27px 46px -19px rgba(0,0,0,0.2);
+    box-shadow: -1px 27px 46px -19px rgba(0,0,0,0.2);
 }
 
 /* Product listings page */
