@@ -3,55 +3,82 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
-            {% include 'partials/_breadcrumbs.html' %}
-            </div>
-        </div>
-    </div>
+<div class="container header-container">
+	<div class="row">
+		<div class="col">
+			{% include 'partials/_breadcrumbs.html' %}
+		</div>
+	</div>
+</div>
 {% endblock %}
 
 {% block content %}
 <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h2 class="logo-font">Products</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
-                <div class="row">
-                    {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-3 mb-3">
-                            <div class="card h-100 product-card">
-                                {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col text-center mt-3">
+			<h2 class="logo-font">Products</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="product-container col-10 offset-1">
+			<div class="row mt-1 mb-2"></div>
+			<div class="row">
+				<div class="col-md-3">
+                <h6>Filter by Category</h6>
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'products' %}?category=tshirts"><i class="fas fa-tshirt mr-2"></i>T-Shirts</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'products' %}?category=masks"><i class="fas fa-head-side-mask mr-2"></i>Masks</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'products' %}?category=pins"><i class="fas fa-certificate mr-2"></i>Pins</a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link" href="{% url 'products' %}?category=mugs"><i class="fas fa-coffee mr-2"></i>Mugs</a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link" href="{% url 'products' %}?category=socks"><i class="fas fa-socks mr-2"></i>Socks</a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link" href="{% url 'products' %}?category=hats"><i class="fas fa-hat-cowboy-side mr-2"></i>Hats</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-9">
+					<div class="row">
+						{% for product in products %}
+						<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3 mt-3">
+							<div class="card h-100 product-card">
+								{% if product.image %}
+								<a href="{% url 'product_detail' product.id %}">
+									<img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
                                 </a>
-                                {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+									{% else %}
+									<a href="{% url 'product_detail' product.id %}">
+										<img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <h5 class="mb-2"><strong>{{ product.name }}</strong></h5>
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="text-left price-tag">${{ product.price }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
+										{% endif %}
+										<div class="card-body pb-0">
+											<h5 class="mb-2"><strong>{{ product.name }}</strong></h5>
+										</div>
+										<div class="card-footer bg-white pt-0 border-0 text-left">
+											<div class="row">
+												<div class="col">
+													<p class="text-left price-tag">${{ product.price }}</p>
+												</div>
+											</div>
+										</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 {% endblock %}
