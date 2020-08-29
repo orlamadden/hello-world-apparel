@@ -25,29 +25,51 @@
 			<div class="row mt-1 mb-2"></div>
 			<div class="row">
 				<div class="col-md-3">
-                <h6>Filter by Category</h6>
+					<h6>Filter by Category</h6>
 					<ul class="nav flex-column">
 						<li class="nav-item">
-							<a class="nav-link" href="{% url 'products' %}?category=tshirts"><i class="fas fa-tshirt mr-2"></i>T-Shirts</a>
+							<a class="nav-link"
+								href="{% url 'products' %}?category=tshirts"><i class="fas fa-tshirt mr-2"></i>T-Shirts</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="{% url 'products' %}?category=masks"><i class="fas fa-head-side-mask mr-2"></i>Masks</a>
+							<a class="nav-link"
+								href="{% url 'products' %}?category=masks"><i class="fas fa-head-side-mask mr-2"></i>Masks</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="{% url 'products' %}?category=pins"><i class="fas fa-certificate mr-2"></i>Pins</a>
+							<a class="nav-link"
+								href="{% url 'products' %}?category=pins"><i class="fas fa-certificate mr-2"></i>Pins</a>
 						</li>
-                        <li class="nav-item">
-							<a class="nav-link" href="{% url 'products' %}?category=mugs"><i class="fas fa-coffee mr-2"></i>Mugs</a>
+						<li class="nav-item">
+							<a class="nav-link"
+								href="{% url 'products' %}?category=mugs"><i class="fas fa-coffee mr-2"></i>Mugs</a>
 						</li>
-                        <li class="nav-item">
-							<a class="nav-link" href="{% url 'products' %}?category=socks"><i class="fas fa-socks mr-2"></i>Socks</a>
+						<li class="nav-item">
+							<a class="nav-link"
+								href="{% url 'products' %}?category=socks"><i class="fas fa-socks mr-2"></i>Socks</a>
 						</li>
-                        <li class="nav-item">
-							<a class="nav-link" href="{% url 'products' %}?category=hats"><i class="fas fa-hat-cowboy-side mr-2"></i>Hats</a>
+						<li class="nav-item">
+							<a class="nav-link"
+								href="{% url 'products' %}?category=hats"><i class="fas fa-hat-cowboy-side mr-2"></i>Hats</a>
 						</li>
 					</ul>
 				</div>
 				<div class="col-md-9">
+					<div class="row mb-3">
+						<div class="col text-right">
+                        <form method="GET" action="{% url 'products' %}">
+							<div class="dropdown">
+								<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Sort by
+  </button>
+								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+									<a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price - Low to High</a>
+									<a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc">Price - High to Low</a>
+									<a class="dropdown-item" href="#">Name A - Z</a>
+								</div>
+							</div>
+                            </form>
+						</div>
+					</div>
 					<div class="row">
 						{% for product in products %}
 						<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3 mt-3">
