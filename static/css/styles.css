@@ -18,6 +18,10 @@ body {
     background-color: var(--orange);
 }
 
+#delivery-banner {
+    background-color: #000000;
+}
+
 .website-cta {
     font-weight: 800;
 }
