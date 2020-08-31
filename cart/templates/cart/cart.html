@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+	<div class="row">
+		<div class="col">
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="overlay"></div>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h2>Shopping cart</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			{% if bag_items %}
+			<div class="table-responsive rounded"></div>
+			{% else %}
+			<p>Your cart is empty.</p>
+			<a href="{% url 'products' %}" class="btn rounded-3 btn-lg">
+            <span><i class="fas fa-chevron-left mr-2"></i></span>
+            <span class="text-uppercase">Keep Shopping</span>
+            </a>
+			{% endif %}
+		</div>
+	</div>
+</div>
+
+{% endblock %}
