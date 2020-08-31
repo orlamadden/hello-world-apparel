@@ -8,7 +8,7 @@ html {
 
 body {
     background-color: rgb(253, 196, 122);
-    height: calc(100vh - 164px);
+    height: calc(100vh - 144px);
     color: #555;
     font-family: 'Gothic A1', sans-serif;
 }
