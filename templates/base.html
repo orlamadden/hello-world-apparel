@@ -12,9 +12,20 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;600;800&display=swap" rel="stylesheet">
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;600;800&display=swap" rel="stylesheet">
 	<title>Hello World Apparel {% block title %} {% endblock %}</title>
+	{% block corejs %}
+	<script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+	{% endblock %}
 </head>
 
 <body>
@@ -27,7 +38,7 @@
 					<h2 class="logo-font text-white my-0"><strong>Hello World Apparel</strong></h2>
 				</a>
 			</div>
-            <!-- search bar -->
+			<!-- search bar -->
 			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
 				<form method="GET" action="{% url 'products' %}">
 					<div class="input-group w-100">
@@ -66,7 +77,7 @@
 							{% endif %}
 						</div>
 					</li>
-                    <!-- shopping cart -->
+					<!-- shopping cart -->
 					<li class="list-inline-item">
 						<a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link"
 							href="{% url 'view_cart' %}">
@@ -91,15 +102,16 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 				{% include 'partials/_navbar.html' %}
-                {% include 'partials/_mobile-header.html' %}
+				{% include 'partials/_mobile-header.html' %}
 			</nav>
 		</div>
-        <div class="divider"></div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
-                <h6 class="logo-font my-1">Free delivery across Ireland on orders over ${{ free_delivery_threshold }}!</h6>                
-            </div>            
-        </div>
+		<div class="divider"></div>
+		<div id="delivery-banner" class="row text-center">
+			<div class="col bg-black text-white">
+				<h6 class="logo-font my-1">Free delivery across Ireland on orders over ${{ free_delivery_threshold }}!
+				</h6>
+			</div>
+		</div>
 	</header>
 
 	<!-- messages block -->
@@ -107,22 +119,19 @@
 	<div class="messages"></div>
 	{% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+	{% block page_header %}
+	{% endblock %}
 
 	<!-- main body content block -->
 	{% block content %}
 	{% endblock %}
 
-    {% include 'partials/_footer.html' %}
+	{% include 'partials/_footer.html' %}
 
 	<!-- javascript block -->
 	{% block postloadjs %}
 	{% endblock %}
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
