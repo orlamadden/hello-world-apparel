@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 
+from .forms import OrderForm
+
 # Create your views here.
 def checkout(request):
     cart = request.session.get('cart', {})
@@ -14,3 +16,7 @@ def checkout(request):
     }
 
     return render(request, template, context)
+
+
+def calc_subtotal(price, quantity):
+    return price * quantity
