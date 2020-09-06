@@ -16,8 +16,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;600;800&display=swap" rel="stylesheet">
 	<title>Hello World Apparel {% block title %} {% endblock %}</title>
 
-    {% block extra_css %}
-    {% endblock %}
+	{% block extra_css %}
+	{% endblock %}
 
 	{% block corejs %}
 	<script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
@@ -29,8 +29,8 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
-    <!-- Stripe payments JS -->
-    <script src="https://js.stripe.com/v3/"></script>
+	<!-- Stripe payments JS -->
+	<script src="https://js.stripe.com/v3/"></script>
 	{% endblock %}
 </head>
 
@@ -122,7 +122,11 @@
 
 	<!-- messages block -->
 	{% if messages %}
-	<div class="messages"></div>
+	<div class="toast-container">
+		{% for message in messages %}
+		{% include 'partials/toasts/toast_success.html' %}
+		{% endfor %}
+	</div>
 	{% endif %}
 
 	{% block page_header %}
@@ -136,6 +140,9 @@
 
 	<!-- javascript block -->
 	{% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
 	{% endblock %}
 
 </body>

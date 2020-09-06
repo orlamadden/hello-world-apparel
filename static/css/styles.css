@@ -62,6 +62,23 @@ body {
     box-shadow: -1px 27px 46px -19px rgba(0,0,0,0.2);
 }
 
+/* Toasts */
+
+.toast-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999;
+}
+
+.custom-toast {
+    overflow: visibile;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 /* Product listings page */
 
 .price-tag {
