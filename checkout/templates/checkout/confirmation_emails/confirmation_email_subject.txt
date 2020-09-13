@@ -1,0 +1,1 @@
+Order {{ order.order_number }} confirmed
