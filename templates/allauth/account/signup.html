@@ -5,20 +5,36 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block inner_content %}
-<hr>
-<h2 class="logo-font mb-4">{% trans "Sign Up" %}</h2>
-<hr>
+<div class="row mt-3">
+	<div class="col-sm-12 text-center">
+		<p>
+			<h2 class="logo-font mb-4">{% trans "Signup" %}</h2>
+		</p>
+	</div>
+</div>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<div class="container mt-2 mb-5 user-management">
+	<div class="row justify-content-center">
+		<div class="col-sm-12 col-md-5 col-lg-5">
 
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form|crispy }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+			<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+				{% csrf_token %}
+				{{ form|crispy }}
+				{% if redirect_field_value %}
+				<input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <a class="btn btn-outline-black rounded-0" href="{% url 'account_login' %}">Back to Login</a>
-  <button type="submit">{% trans "Sign Up" %}</button>
-</form>
+				<button type="submit">{% trans "Sign Up" %}</button>
+			</form>
+		</div>
+		<div class="col-sm-12 col-md-2 or">
+			<div class="or-text text-center">Or</div>
+		</div>
+		<div class="col-sm-12 col-md-5 col-lg-5">
+			<h3>Have an account?</h3>
+			<p><a href="{{ login_url }}">Log in here.</a></p>
+		</div>
+	</div>
+</div>
+
 
 {% endblock %}
