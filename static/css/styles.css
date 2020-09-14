@@ -168,8 +168,8 @@ footer {
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
-    border-radius: 0;
+    border-color: rgb(114, 42, 42);
+    border-radius: 4px;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
@@ -226,4 +226,45 @@ footer {
     .header-container {
         padding-top: 164px;
     }
+
+}
+
+@media (max-width: 767px) {
+    .user-management .or {
+        flex-direction: row;
+    }
+}
+
+/* log in page */
+
+.user-management {
+    max-width: 680px;
+}
+
+.user-management .or {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    text-align: center;
+}
+
+.user-management .or:before {
+    content: '';
+    display: block;
+    background: #dddddd;
+    width: 1px;
+    flex: 1;
+}
+
+.user-management .or:after {
+    content: '';
+    display: block;
+    background: #dddddd;
+    width: 1px;
+    flex: 1;
+}
+
+.user-management .or-text {
+    padding: 20px;
 }
