@@ -1,0 +1,1 @@
+web: gunicorn hello_world_apparel.wsgi:application
