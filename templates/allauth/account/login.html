@@ -53,6 +53,9 @@
 
 			{% include "socialaccount/snippets/login_extra.html" %}
 
+            <div id="fb-root"></div>
+            <div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
+
 			{% else %}
 			<p>{% blocktrans %}If you have not created an account yet, then please
 				<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
@@ -63,4 +66,8 @@
 	</div>
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=342427993569737&autoLogAppEvents=1" nonce="NsASL56p"></script>
 {% endblock %}
