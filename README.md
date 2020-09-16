@@ -193,6 +193,43 @@ Sometimes a group photo is included as well to show off more mice from the same 
 
 - When a user updates their billing information they are notified of this change through a success toast message.
 
+---
+
+## Technologies Used
+
+### Languages
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Glossary/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript)
+- [Python](https://www.python.org/about/)
+
+### Libraries, Frameworks
+
+- [Django](https://www.djangoproject.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Pillow](https://pillow.readthedocs.io/en/stable/)
+- [Gunicorn](https://gunicorn.org/)
+- [dj-database-url](https://pypi.org/project/dj-database-url/)
+- [boto3](https://pypi.org/project/boto3/)
+- [django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+- [psycopg2-binary](https://pypi.org/project/psycopg2-binary/)
+- [django-storages](https://django-storages.readthedocs.io/en/latest/)
+- [flake8](https://pypi.org/project/flake8/)
+- [Stripe](https://stripe.com/ie)
+- [PostgreSQL](https://www.postgresql.org/)
+
+### Tools
+
+- [Gitpod](https://www.gitpod.io/)
+- [Font Awesome](https://fontawesome.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [AWS S3]
+- [Balsamiq](https://balsamiq.com/)
+- [Git](https://git-scm.com/about)
+- [GitHub](https://github.com/)
+
 --------
 
 For educational purposes only.
