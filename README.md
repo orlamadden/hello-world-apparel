@@ -4,6 +4,42 @@ Hello World Apparel is the final project built for grading for the Code Institut
 
 ---
 
+## Table of Contents
+1. [**UX**](#ux)
+    - [**Project purpose**](#project-purpose)
+    - [**Business goals**](#business-goals)
+    - [**User Stories**](#user-stories)
+    - [**Design**](#design)
+        - [**Framework**](#framework)
+        - [**Color Scheme**](#color-scheme)
+        - [**Icons**](#icons)
+        - [**Typography**](#typography)
+    - [**Wireframes**](#wireframes)
+
+2. [**Features**](#features)
+    - [**Current Features**](#current-features)
+    - [**Recommendations for future implementation**](#recommendations-for-future-implementation)
+
+3. [**Technologies Used**](#technologies-used)
+    - [**Front-End Technologies**](#front-end-technologies)
+    - [**Back-End Technologies**](#back-end-technologies)
+
+4. [**Testing**](#testing)
+    - [**Validators**](#validators)
+    - [**Bugs**](#bugs)
+
+5. [**Deployment**](#deployment)
+    - [**Local Deployment**](#local-deployment)
+    - [**Remote Deployment**](#remote-deployment)
+
+6. [**Credits**](#credits)
+    - [**Content**](#content)
+    - [**Media**](#media)
+    - [**Code**](#code)
+    - [**Acknowledgements**](#acknowledgements)
+
+---
+
 ## UX
 
 ### Project purpose
@@ -39,6 +75,123 @@ As a user of the site I want and/or expect:
 - an order summary of an order I just submitted
 - to find information about past orders I have made
 
+### Wireframes
+
+I used Balsamiq to complete my wireframes as part of the design and planning process for Hello World Apparel. Balsamiq was used because of it's simplicity and its efficiency in creating designs using its pre-built components. I made minor changes throughout the development stage of the project, so my website looks slightly different than the wireframes based on user feedback as part of the iterative design process. The core concept of the website is still there.
+
+Each link below contains a desktop, tablet and mobile view for each of the respective areas of Hello World Apparel:
+
+- Landing page
+- Product listings page
+- Register page
+- Login page
+- Single product detail page
+- Shopping cart page
+- Checkout page
+
+##### back to [top](#table-of-contents)
+
+---
+
+## Features
+
+This section will outline all the features of Hello World Apparel implemented by page.
+
+### All pages
+
+#### Top navbar
+
+- The top most navbar contains the search functionality of the website. The brand logo in the top left always redirects users back to the home page. 
+- A user who is currently logged out can access the registration page or log in page through the user icon. 
+- A logged in user can access their profile or log out through the user icon.
+- The checkout icon displays a pricing summary of the user's current order in their cart.
+
+#### Main navbar
+
+- The main navbar contains a dropdown filter for navigating quickly though Hello World Apparel.
+- Included in the main navigation is access to:
+   - All products: navigates to all products in the Hello World Apparel store
+   - Most popular: navigates to the most popular products in the Hello World store (based on sales)
+   - Office kits: navigates to an apparel bundle
+   - On sale: navigates to items that are on sale
+
+### Sign up page
+
+#### Registration Form
+
+- A user who is not logged in can create a new account using the register page. 
+- The registration requires an email address, email confirmation, a username (which must be unique), a password and password conformation fields.
+- The form was created using Django Crispy Forms.
+
+#### Registration using Facebook
+
+- A user has the option to register for an account with Hello World Apparel using their Facebook credentials. This was implemented using django-allauth.
+- The user will be redirected to Facebook to input their Facebook email information.
+- Once they complete this step, they will need to verify their email address.
+- Upon verification, they can access Hello World Apparel using their Facebook details.
+
+### Login page
+
+#### Log in form
+
+- A user who is registered can log in using their username and password.
+- The form was created using Django Crispy Forms.
+
+#### Login using Facebook
+
+- A user can log in using their Facebook credentials once they have completed the socail registration process in the previous section.
+
+### Product listings page
+
+#### Sort products
+
+- The product listings page includes the option to sort its results by:
+   - Price - low to high
+   - Price - high to low
+   - popular
+
+#### Category filter
+
+- On the left side of the product listings page are a list of categories that match all products in Hello World Apparel
+- Users can filter by t-shirts or masks, for example.
+
+#### Products list
+
+- Products in the shop are displayed as thumbnail images with the product title and price displayed underneath each thumbnail.
+- When users click on a product card, they are taken to the details page of the selected product.
+- If a super user is logged in, they have easy access to edit or delete a product.
+
+### Product details page
+
+#### Listing details
+
+- Each product detail page features an image of the product on sale.
+Sometimes a group photo is included as well to show off more mice from the same collection.
+- The product title, price and description are all clearly visible on the product listing page to the right of the image.
+- There are certain products, such as t-shirts, that require sizing information. If applicable, there is a size dropdown selector to allow users to choose their size.
+- A numeric input selector allows the user to select the quantity of a product they wish to purchase. The minimum product quantity a user can purchase is 1, with the maximum being 99.
+- Users can add a product to their cart by clicking the "Add to cart" button or continue shopping by clicking the "Keep shopping" button.
+
+#### Toast notification
+
+- When a user selects a product, they are notified of their selection through a success toast message.
+- They are then given the option to continue shopping or view their cart.
+
+### User profile page
+
+#### Billing details
+
+- The users profile page can only be accessed by a logged in user. 
+- The account page contains the user's billing information that they can edit and update. This billing information will automatically be included in the checkout process to save time for the user.
+- An order summary is visibile if user's have made a purchase in Hello World Apparel. This will contain:
+   - Order number
+   - Date an item was purchased
+   - Item(s) purchased
+   - Order total
+
+#### Toast notification
+
+- When a user updates their billing information they are notified of this change through a success toast message.
 
 --------
 
