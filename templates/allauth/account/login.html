@@ -35,9 +35,8 @@
 		<div class="col-sm-12 col-md-5 col-lg-5">
 
 			{% load socialaccount %}
-			<!-- <a href="{% provider_login_url "facebook" method="oauth2" %}">Facebook OAuth2</a>
-			<form class="login" method="POST" action="{% url 'account_login' %}"> -->
-            <div class="fb-login-button mb-2" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
+			<a href="{% provider_login_url "facebook" method="oauth2" %}">Facebook Login</a>
+			<form class="login" method="POST" action="{% url 'account_login' %}">
             <li><small>One less password to remember</small>
             <li><small>We never post without your permission</small>
 			
@@ -49,10 +48,4 @@
 	</div>
 </div>
 
-{% endblock %}
-
-{% block postloadjs %}
-<script async defer crossorigin="anonymous"
-	src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=342427993569737&autoLogAppEvents=1"
-	nonce="NsASL56p"></script>
 {% endblock %}
