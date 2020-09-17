@@ -18,14 +18,15 @@
 <div class="container mt-2 mb-5 user-management">
 	<div class="row justify-content-center">
 		<div class="col-sm-12 col-md-5 col-lg-5">
+        <form class="login" method="POST" action="{% url 'account_login' %}">
 			{% csrf_token %}
 			{{ form.as_p }}
 			{% if redirect_field_value %}
 			<input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
-			<button class="primaryAction" type="submit">{% trans "Login" %}</button>
-            <a class="button secondaryAction ml-3"
-				href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+				<button class="primaryAction" type="submit">{% trans "Login" %}</button>
+				<a class="button secondaryAction ml-3"
+					href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
 			</form>
 
 		</div>
@@ -37,13 +38,13 @@
 			{% load socialaccount %}
 			<a href="{% provider_login_url "facebook" method="oauth2" %}">Facebook Login</a>
 			<form class="login" method="POST" action="{% url 'account_login' %}">
-            <li><small>One less password to remember</small>
-            <li><small>We never post without your permission</small>
-			
-            <div class="account-container mt-5">
-			<h3>New around here?</h3>
-			<p><a href="{{ signup_url }}">Create an account.</a></p>
-            </div>
+				<li><small>One less password to remember</small>
+				<li><small>We never post without your permission</small>
+
+					<div class="account-container mt-5">
+						<h3>New around here?</h3>
+						<p><a href="{{ signup_url }}">Create an account.</a></p>
+					</div>
 		</div>
 	</div>
 </div>
