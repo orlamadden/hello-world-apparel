@@ -13,13 +13,8 @@ body {
     font-family: 'Gothic A1', sans-serif;
 }
 
-.divider {
-    height: 4px;
-    background-color: var(--orange);
-}
-
 #delivery-banner {
-    background-color: #000000;
+    background-color: #ec5f0d;
 }
 
 .website-cta {
