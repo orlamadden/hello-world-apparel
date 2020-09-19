@@ -1,5 +1,5 @@
 :root {
-  --orange: rgb(240, 108, 0);
+  --orange: #f16b1e;
 }
 
 html {
@@ -14,7 +14,7 @@ body {
 }
 
 #delivery-banner {
-    background-color: #f16b1e;
+    background-color: var(--orange);
 }
 
 .website-cta {
@@ -130,6 +130,7 @@ body {
 
 .price-tag {
     color: var(--orange);
+    font-size: 1.6em;
     font-weight: 600;
 }
 
@@ -140,6 +141,16 @@ body {
 
 .product-card:hover {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.orange-btn {
+    background-color: var(--orange); 
+}
+
+.review-container {
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 4px;
+    padding: 20px;
 }
 
 /* cart section */
@@ -218,13 +229,21 @@ footer {
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
+    
     .header-container {
         padding-top: 164px;
     }
 
 }
 
+@media (max-width: 992px) {
+    .header-container {
+        padding-top: 104px;
+    }
+}
+
 @media (max-width: 767px) {
+
     .user-management .or {
         flex-direction: row;
     }

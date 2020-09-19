@@ -1,32 +1,29 @@
-<div class="container-fluid mt-2">
+<div class="container mt-2 d-flex justify-content-center">
     <div class="product-detail-wrapper">  
         <div class="row">
             <div class="col-12">
                 <div class="product-reviews">
-                    <h2 class="product-reviews-text text-center text-black">Product Reviews</h2>
+                    <h2 class="font-weight-bold">Product Reviews</h2>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 review-vh">
-                <div class="card text-center align-items-center">
-                    <div class="card-body">
-                    <h3 class="text-center text-black">Reviews</h3>
+            <div class="col-lg-6">
+                <div class="reviews">
+                    <div class="review-list">
+                    <h4 class="">Customer Reviews</h4>
                         {% if reviews %}
                         {% for review in reviews %}
-                        <div class="card-container">
-                            <div class="review-card rounded">
-                                <div class="review-card-header">
-                                    <h4 class="text-center text-black d-inline-block"><i class="fas fa-user d-block"></i></h4>
-                                    <h5 class="review-user text-center text-black">{{review.user}}</h5>
-                                </div>
-                                <p class="text-center text-black">{{review.comment}}</p>
-                                <p class="text-center text-black">{{ review.rating|floatformat:0 }}/5</p>
+                        <div class="review-container mt-3">
+                            
+                                    <h5 class="font-weight-bold"><i class="fas fa-user mr-2"></i>{{review.user}}</h5>
+                                <p class="">{{review.comment}}</p>
+                                <p class="">{{ review.rating|floatformat:0 }}/5</p>
                                 {% if review.user == request.user %}
                                 <div class="button-wrapper pb-5">
                                     <a class="btn orange-btn text-white " href="{% url 'edit_review' product.id %}" aria-label="edit button">Edit</a>
-                                    <a class="btn white-btn text-black" href="{% url 'delete_review' product.id %}" aria-label="delete button">Delete</a> 
+                                    <a class="btn" href="{% url 'delete_review' product.id %}" aria-label="delete button">Delete</a> 
                                 </div>
-                                {% endif %}
-                            </div>
+                            {% endif %}
+                            
                         </div>
                         {% endfor %}
                         {% else %}
@@ -35,10 +32,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 mb-5">
-                <div class="card">
-                    <div class="card-body">
-                    <h3 class="text-center text-black">Leave a review</h3>
+            <div class="col-lg-6 mt-sm-5 mt-lg-0">
+                <div class="reviews">
+                    <div class="review-list">
+                    <h4 class="">Leave a review</h4>
                     {% if review_form  %}
                     <form action="{% url 'add_review' product.id %}" method="POST" class="text-center text-black">
                         <div class="col-12 col-lg-8 offset-lg-2">
@@ -50,9 +47,9 @@
                         </div>
                     </form>
                     {% elif review and not review_form %}
-                    <p class="text-black text-center">Thank you for reviewing this product, you can edit it in the reviews section</p>
+                    <p class="">Thank you for reviewing this product, you can edit it in the reviews section</p>
                     {% else %}
-                    <p class="text-black text-center">Purchase to make a review</p>
+                    <p class="">Purchase this item to make a review.</p>
                     {% endif %}
                     </div>
                 </div>
