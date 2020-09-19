@@ -1,12 +1,17 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+
 from django.db.models import Q
 from django.db.models.functions import Lower
-from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
-from .models import Product, Category
 
-from .forms import ProductForm
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+
+from profiles.models import UserProfile
+from checkout.models import Order
+from .models import Product, Category, Review
+
+from .forms import ProductForm, ReviewForm
 
 def all_products(request):
     """ 
@@ -70,9 +75,33 @@ def product_detail(request, product_id):
     """
 
     product = get_object_or_404(Product, pk=product_id)
+    review_form = None
+    reviews = Review.objects.filter(product=product_id)
+    review = None
+
+    if request.user.is_authenticated:
+        profile = request.user.userprofile
+        user_orders = Order.objects.filter(user_profile=profile)
+        user_purchased = False
+        for order in user_orders:
+            for item in order.lineitems.all():
+                if item.product.id == product.id:
+                    user_purchased = True
+                    break
+
+        if user_purchased:
+            review = Review.objects.filter(user=request.user, product=product_id)
+            if review:
+                review_form = None
+            else:
+                review_form = ReviewForm()
 
     context = {
         'product': product,
+        'reviews': reviews,
+        'review': review,
+        'page_title': product.name,
+        'review_form': review_form,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -147,3 +176,76 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+def add_review(request, product_id):
+    """
+    View to handle the POST of reviews from a specific user
+    """
+    user = get_object_or_404(UserProfile, user=request.user)
+    product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.filter(product=product_id)
+    review_form = ReviewForm()
+
+    if request.method == 'POST':
+        review_form = ReviewForm(request.POST, instance=product)
+
+        form_data = {
+            'comment': request.POST['comment'],
+            'rating': request.POST['rating']
+            }
+
+        review_form = ReviewForm(form_data)
+        if review_form.is_valid():
+            review = review_form.save(commit=False)
+            review.user = request.user
+            review.product = product
+            review.save()
+            messages.success(request, f'Thank you for posting a review for {product.name}.')
+        else:
+            messages.error(request, f'Sorry we were unable to post your review for {product.name}, please try again')
+        return redirect(reverse('product_detail', args=(product_id,)))
+    else:
+        review_form = ReviewForm(instance=user)
+
+    context = {
+        "product": product,
+        "reviews": reviews,
+        "review_form": review_form,
+    }
+    return render(request, 'products/product_detail.html', context)
+
+
+def edit_review(request, product_id):
+    """
+    View to edit a current review that the user has placed on a product
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    user = get_object_or_404(Review, user=request.user, product=product_id)
+    if request.method == "POST":
+        review_form = ReviewForm(request.POST, instance=user)
+        if review_form.is_valid():
+            review_form.save()
+            messages.success(request, f'We have updated your review for {product.name}.')
+            return redirect(reverse('product_detail', args=[product_id,]))
+        else:
+            messages.error(request, f'Sorry we were unable to update your review for {product.name}, please try again.')
+    else:
+        review_form = ReviewForm(instance=user)
+
+    template = 'products/edit_review.html'
+    context = {
+        'product': product,
+        'review_form': review_form,
+    }
+    return render(request, template, context)
+
+
+def delete_review(request, product_id):
+    """
+    Give the user the ability to delete their review
+    """
+    review = get_object_or_404(Review, user=request.user, product=product_id)
+    review.delete()
+    messages.success(request, 'Your review has been deleted.')
+    return redirect(reverse('product_detail', args=(product_id,)))

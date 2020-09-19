@@ -97,6 +97,8 @@ Each link below contains a desktop, tablet and mobile view for each of the respe
 
 This section will outline all the features of Hello World Apparel implemented by page.
 
+### Current Features
+
 ### All pages
 
 #### Top navbar

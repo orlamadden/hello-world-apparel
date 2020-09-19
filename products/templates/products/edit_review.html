@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %} DN Fitness | {{ page_title }} {% endblock %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col">
+            
+            </div>
+        </div>
+    </div>
+{% endblock  %}
+
+{% block content %}
+    <div class="overlay-delete"></div>
+    <div class="white-overlay"></div>
+    <div class="container mt-2 text-center">
+        <div class="row mb-5">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="text-center text-black">Update your review</h3>
+                        <form action="{% url 'edit_review' product.id %}" method="POST" class="text-center text-black mb-5">
+                            <div class="col-12 col-lg-8 offset-lg-2">
+                                {% csrf_token %}
+                                {{ review_form }}
+                            </div>
+                            <div class="col-sm-12 col-12 text-center">
+                                <button class="btn orange-btn text-white" aria-label="update review button" id="reviewbutton">Update your review</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock  %}

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category
+from .models import Product, Category, Review
 
 """ 
 Customises what fields to display in
@@ -28,5 +28,18 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
+class ReviewAdmin(admin.ModelAdmin):
+    """
+    To display the below fields to the Review admin panel.
+    """
+    list_display = (
+        'user',
+        'comment',
+        'product',
+        'rating'
+    )
+
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(Review, ReviewAdmin)
