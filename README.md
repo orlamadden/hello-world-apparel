@@ -161,6 +161,11 @@ This section will outline all the features of Hello World Apparel implemented by
 - When users click on a product card, they are taken to the details page of the selected product.
 - If a super user is logged in, they have easy access to edit or delete a product.
 
+#### Pagination
+
+- Pagination was implemented using Paginator.
+- A maximum of 12 products is displayed per page.
+
 ### Product details page
 
 #### Listing details

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
+from django.db.models.functions import Lower
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from .models import Product, Category
 
@@ -14,10 +15,6 @@ def all_products(request):
     """
 
     products = Product.objects.all()
-
-    paginator = Paginator(products, 12)
-    page = request.GET.get('page')
-    paged_listings = paginator.get_page(page)
 
     query = None
     categories = None
@@ -57,7 +54,7 @@ def all_products(request):
     current_sorting = f'{sort}_{direction}'
 
     context = {
-        'products': paged_listings,
+        'products': products,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
@@ -101,6 +98,7 @@ def add_product(request):
         form = ProductForm()
     
     template = 'products/add_product.html'
+    
     context = {
         'form': form,
     }
@@ -129,6 +127,7 @@ def edit_product(request, product_id):
         messages.info(request, f'You are editing {product.name}')
 
     template = 'products/edit_product.html'
+    
     context = {
         'form': form,
         'product': product,

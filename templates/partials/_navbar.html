@@ -3,13 +3,13 @@
 		<li class="nav-item dropdown">
 			<a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
 				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				All Products
+				Shop
 			</a>
 			<div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item ">T-Shirts</a>
-                <a href="" class="dropdown-item ">Masks</a>
-                <a href="" class="dropdown-item ">Mugs</a>
-				<a href="" class="dropdown-item ">Pins</a>
+                <a href="{% url 'products' %}?category=tshirts" class="dropdown-item ">T-Shirts</a>
+                <a href="{% url 'products' %}?category=masks" class="dropdown-item ">Masks</a>
+                <a href="{% url 'products' %}?category=mugs" class="dropdown-item ">Mugs</a>
+				<a href="{% url 'products' %}?category=pins" class="dropdown-item ">Pins</a>
 				<a href="{% url 'products' %}" class="dropdown-item">All Products</a>
 			</div>
 		</li>
