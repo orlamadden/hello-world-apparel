@@ -89,6 +89,24 @@ Each link below contains a desktop, tablet and mobile view for each of the respe
 - Shopping cart page
 - Checkout page
 
+### Design
+
+It was important to keep the design simple for Hello World Apaprel. Some ecommerce websites can overwhelm users with various colours, buttons and links which can make it hard for users to focus on searching for products and making a purchase. Hello World Apparel is minimalistic in design with a focus on a good user experience to help users find items they are looking for and have a seamless checkout experience.
+
+#### Font
+
+The font of choice for this project is Gothic A1 from Google fonts. I chose this font as it is simple and characteristc. The font is clean and gives off a sense of fun for Hello World Apparel as it sells humerous products.
+
+#### Colour
+
+For this project, I kept design and color to a minimum so users could focus on the core functionality of the website. The primary colours of the website is orange, white, black and light grey. Orange is used in moderation, primarily for bringing important information to attention, or used as the primary call to action on a page. The light colours of white and grey help the orange to stand out so user's notice it.
+
+![https://res.cloudinary.com/orla2020/image/upload/v1600609779/ms4/ms4-palette_h7zshy.png](https://res.cloudinary.com/orla2020/image/upload/v1600609779/ms4/ms4-palette_h7zshy.png)
+
+#### Images
+
+The product images used across the website have been created by me in Photoshop. Aside from programming, a hobby of mine is creating pop culture t-shirt designs, and these are some designs that I have sold over the years. 
+
 ##### back to [top](#table-of-contents)
 
 ---
