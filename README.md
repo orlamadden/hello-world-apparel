@@ -135,6 +135,13 @@ This section will outline all the features of Hello World Apparel implemented by
    - Office kits: navigates to an apparel bundle
    - On sale: navigates to items that are on sale
 
+### Home page
+
+#### Best sellers
+
+- The best sellers list on the home page are product listings that are marked as featured by the site admin
+- The featured option is a boolean value that is in the Product model
+
 ### Sign up page
 
 #### Registration Form
