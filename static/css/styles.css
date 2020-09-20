@@ -160,6 +160,14 @@ body {
     cursor: pointer;
 }
 
+.summary-header {
+    background-color: #e7e7e7;
+}
+
+div.cart-summary {
+    padding: 10px;
+}
+
 /* footer section */
 
 footer {
