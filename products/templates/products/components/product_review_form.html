@@ -27,23 +27,23 @@
                         </div>
                         {% endfor %}
                         {% else %}
-                        <p class="text-black">Nobody has left a review for this product yet.</p>
+                        <p>Nobody has left a review for this product yet.</p>
                         {% endif %}
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 mt-sm-5 mt-lg-0">
                 <div class="reviews">
-                    <div class="review-list">
+                    <div class="leave-review">
                     <h4 class="">Leave a review</h4>
                     {% if review_form  %}
-                    <form action="{% url 'add_review' product.id %}" method="POST" class="text-center text-black">
-                        <div class="col-12 col-lg-8 offset-lg-2">
+                    <form action="{% url 'add_review' product.id %}" method="POST">
+                        <div class="col-12 mt-3">
                             {% csrf_token %}
                             {{ review_form }}
                         </div>
-                        <div class="col-sm-12 col-12 text-center">
-                            <button class="btn orange-btn text-white" id="reviewbutton">Post review</button>
+                        <div class="col-12 mt-3">
+                            <button class="btn orange-btn text-white">Post review</button>
                         </div>
                     </form>
                     {% elif review and not review_form %}

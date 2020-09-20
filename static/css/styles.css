@@ -57,7 +57,7 @@ body {
     box-shadow: -1px 27px 46px -19px rgba(0,0,0,0.2);
 }
 
-/* Toasts */
+/* toasts */
 
 .toast-container {
     position: fixed;
@@ -126,7 +126,11 @@ body {
 }
 
 
-/* Product listings page */
+/* product listings page */
+
+.category-text {
+    color: #555555;
+}
 
 .price-tag {
     color: var(--orange);
@@ -135,12 +139,13 @@ body {
 }
 
 .product-card {
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.10);
 }
 
 .product-card:hover {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .orange-btn {

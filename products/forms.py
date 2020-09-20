@@ -23,7 +23,7 @@ class ProductForm(forms.ModelForm):
 
 class ReviewForm(forms.ModelForm):
     """
-    Review form class to create and populate a review form for user.
+    Review form for users to complete if they purchase a certain product
     """
     class Meta:
         model = Review
@@ -31,9 +31,9 @@ class ReviewForm(forms.ModelForm):
         widgets = {
             'comment': forms.Textarea(
                 attrs={
-                    "rows": 5,
-                    "class": 'form-control stripe-style-input',
-                    "placeholder": "Minimum 15 characters",
+                    "rows": 3,
+                    "class": 'form-control',
+                    "placeholder": "Be honest :)",
                 }
             ),
             'rating': forms.NumberInput(
@@ -42,7 +42,7 @@ class ReviewForm(forms.ModelForm):
                     "value": 1,
                     "min": 1,
                     "max": 5,
-                    "class": "form-control stripe-style-input mb-2"
+                    "class": "form-control mb-2"
                 }
             )
         }

@@ -250,7 +250,7 @@ Sometimes a group photo is included as well to show off more mice from the same 
 - [Gitpod](https://www.gitpod.io/)
 - [Font Awesome](https://fontawesome.com/)
 - [Google Fonts](https://fonts.google.com/)
-- [AWS S3]
+- [AWS S3](https://aws.amazon.com/)
 - [Balsamiq](https://balsamiq.com/)
 - [Git](https://git-scm.com/about)
 - [GitHub](https://github.com/)

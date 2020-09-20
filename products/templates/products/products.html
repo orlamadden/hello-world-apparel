@@ -7,9 +7,9 @@
 	<div class="row mt-4">
 		<div class="col">
 			<div id="breadcrumbs" class="col-12">
-            <a href="{% url 'home' %}">Home </a>
+            <a class="category-text" href="{% url 'home' %}">Home </a>
             <span class="ml-2">/<span>
-            <a href="{% url 'products' %}" class="ml-2">Product List </a>
+            <a href="{% url 'products' %}" class="font-weight-bold category-text ml-2">Product List </a>
         </div>
 		</div>
 	</div>
@@ -32,19 +32,19 @@
 					<h6>Filter by Category</h6>
 					<ul class="nav flex-column">
 						<li class="nav-item">
-							<a class="nav-link"
+							<a class="nav-link category-text"
 								href="{% url 'products' %}?category=tshirts"><i class="fas fa-tshirt mr-2"></i>T-Shirts</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link"
+							<a class="nav-link category-text"
 								href="{% url 'products' %}?category=masks"><i class="fas fa-head-side-mask mr-2"></i>Masks</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link"
+							<a class="nav-link category-text"
 								href="{% url 'products' %}?category=pins"><i class="fas fa-certificate mr-2"></i>Pins</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link"
+							<a class="nav-link category-text"
 								href="{% url 'products' %}?category=mugs"><i class="fas fa-coffee mr-2"></i>Mugs</a>
 						</li>
 					</ul>
@@ -95,7 +95,7 @@
 											</div>
 										</div>
 										{% if request.user.is_superuser %}
-										<small class="ml-3">
+										<small class="ml-3 mb-2">
                                                     <a href="{% url 'edit_product' product.id %}">Edit</a> | 
                                                     <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                                 </small>

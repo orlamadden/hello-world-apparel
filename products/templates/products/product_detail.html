@@ -6,12 +6,12 @@
 	<div class="row mt-4">
 		<div class="col">
 			<div id="breadcrumbs" class="col-12">
-				<a href="{% url 'home' %}">Home </a>
+				<a class="category-text" href="{% url 'home' %}">Home </a>
 				<span class="ml-2">/<span>
-            <a href="{% url 'products' %}" class="ml-2">Product List </a>
+            <a href="{% url 'products' %}" class="category-text ml-2">Product List </a>
             {% if product %}
             <span class="ml-2">/<span>
-            <span class="ml-2">{{ product.name }} <span>
+            <span class="ml-2 font-weight-bold category-text">{{ product.name }} <span>
             {% endif %}
 			</div>
 		</div>
@@ -93,11 +93,11 @@
 </div>
 
 <div class="col{% if s %}-12 mt-2{% endif %}">
-	<input type="submit" class="btn orange-btn rounded-4 text-white text-uppercase mt-5" value="Add to Cart">
+	<input type="submit" class="btn orange-btn rounded-4 text-white mt-5" value="Add to Cart">
                             </div>
 	<input type="hidden" name="redirect_url" value="{{ request.path }}">
-                            {% endwith %}
-                        </div>
+        {% endwith %}
+    </div>
 	</form>
 </div>
 </div>
