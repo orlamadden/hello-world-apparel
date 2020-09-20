@@ -36,6 +36,13 @@
     border: 1px solid #000;
 }
 
+.form-group input,
+.form-group select,
+#card-element  {
+    border-radius: 4px;
+
+}
+
 select,
 select option {
     color: #000000;
