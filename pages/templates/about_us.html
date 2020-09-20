@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us | Hello World Apparel{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+	<div class="row mt-4 mb-4">
+		<div class="col-12">
+			<div id="breadcrumbs">
+				<a class="category-text" href="{% url 'home' %}">Home </a>
+				<span class="ml-2">/<span>
+            <a href="#" class="category-text ml-2 font-weight-bold">About Us </a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-8 mt-3">
+            <h1 class="font-weight-bold">About Us</h1>
+            <hr>
+            <p>Hello World Apparel was formed in 2016 as the brainchild of an Irish lass with a passion for fun apparel and accessories.</p>
+
+            <p>To find out more about Hello World Apparel and to read some Frequently Asked Questions, please go to our service section, or you can always contact us using our contact page. (give us a little time to get back to you; be nice – nice people always get answered first).</p>
+
+            <p>Hello World Apparel offers a platform for you to purchase incredible, high quality products. With over 4 years of experience, Hello World Apparel has woven a shared spirit that thrives on producing fun and joyful designs that will bring a smile to your face.
+
+            <p>Hello World Apparel is inspired by a passion for all things fun and creative.</p>
+
+            <a href="{% url 'products' %}" class="btn orange-btn text-white" aria-label="visit shop">Visit shop</a>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
