@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Contact success | Hello World Apparel{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+	<div class="row mt-4 mb-4">
+		<div class="col-12">
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-8 mt-3">
+            <h1 class="font-weight-bold">Thank you!</h1>
+            <p>We will be in touch as soon as we can. Why not browse our store while you wait?</p>
+            <a href="{% url 'products' %}" class="btn orange-btn text-white" aria-label="visit shop">Visit shop</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

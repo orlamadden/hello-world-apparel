@@ -295,3 +295,9 @@ footer {
 .user-management .or-text {
     padding: 20px;
 }
+
+div.custom-form input,
+div.custom-form textarea {
+    margin-bottom: 1em;
+    border: 1px solid #000;
+}

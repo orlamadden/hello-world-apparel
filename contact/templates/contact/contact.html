@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Contact | Hello World Apparel{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+	<div class="row mt-4 mb-4">
+		<div class="col-12">
+			<div id="breadcrumbs">
+				<a class="category-text" href="{% url 'home' %}">Home </a>
+				<span class="ml-2">/<span>
+            <a href="#" class="category-text ml-2 font-weight-bold">Contact Us</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="font-weight-bold">Contact Us</h1>
+            </div>
+            <div class="col-sm-12 col-md-8 mt-2 mb-2">
+                <p>Have something to ask us? Or just fancy a chat? Use the below form to get in touch with us.</p>
+                <p>Please make sure you use a valid email address, how else would we get back to you?!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8">
+                        <h4><i class="fas fa-envelope mr-2"></i></i>Get in touch</h4>
+                        <form action="{% url 'contact' %}" method="POST">
+                            {% csrf_token %}
+                            {% if user.is_authenticated %}
+                                <input type="hidden" name="user_id" value="{{ user.id }}">
+                            {% else %}
+                                <input type="hidden" name="user_id" value="0">
+                            {% endif %}
+                                <div class="form-group custom-form mt-3">
+                                    {{ form }}
+                                </div>
+                            <input type="submit" value="Send" class="btn btn-primary">
+                        </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
