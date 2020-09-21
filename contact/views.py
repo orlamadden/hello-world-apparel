@@ -47,8 +47,8 @@ def contact(request):
     context = {
         'form': ContactForm
     }
-    return render(request, 'contact.html', context)
+    return render(request, 'contact/contact.html', context)
 
 
 def contact_success(request):
-    return render(request, "contact_success.html")
+    return render(request, "contact/contact_success.html")
