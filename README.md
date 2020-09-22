@@ -308,6 +308,54 @@ Sometimes a group photo is included as well to show off more mice from the same 
 
 All models were created with Django's ability to auto-assign a Primary Key (ID).
 
+#### User Model
+
+The User model used for this project is the standard one provided by Django.
+
+#### Category Model
+
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
+Name | name | max_length=250 | CharField
+Friendly Name | friendly_name | max_length=250, null=True, blank=True | CharField
+
+#### Product Model
+
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
+Category | category | null=True, blank=True, on_delete=models.SET_NULL | ForeignKey to Category
+SKU | sku | max_length=254, null=True, blank=True | CharField
+Name | name | max_length=254 | CharField
+Description | description | blank | TextField
+Has Sizes | has_sizes |blank | BooleanField
+Price | price | max_digits=6, decimal_places=2 | DecimalField
+Rating | rating | max_digits=6, decimal_places=2, null=True, blank=True | DecimalField
+Image URL | image_url | max_length=1024, null=True, blank=True | URLField
+Image | image | null=True, blank=True | ImageField
+Featured | featured | default=False | BooleanField
+
+#### Order Model
+
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
+Order Number | order_number | max_length=32, null=False, editable=False | CharField
+User Profile | user_profile | on_delete=models.SET_NULL, null=True, blank=True, related_name='orders' | ForeignKey to User
+Full Name | full_name | max_length=50, null=False, blank=False | CharField
+Email | email | max_length=254, null=False, blank=False | EmailField
+Phone Number | phone_number | max_length=20, null=False, blank=False | CharField
+Postcode | postcode | max_length=20, null=True, blank=True | CharField
+Town / City / Locality | town_or_city | max_length=40, null=False, blank=False | CharField
+Street Address 1 | street_address1 | max_length=80, null=False, blank=False | CharField
+Street Address 2 | street_address1 | max_length=80, null=False, blank=False | CharField
+County | county | max_length=80, null=True, blank=True | CharField
+Country | country | max_length=80, null=True, blank=True | CharField
+Date | date | auto_now_add=True | DateTimeField
+Delivery Cost | delivery_cost | max_digits=6, decimal_places=2, null=False, default=0 | DecimalField
+Order Total | order_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
+Grand Total | grand_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
+Shopping Cart | original_cart | null=False, blank=False, default='' | TextField
+Stripe PID | stripe_pid | max_length=254, null=False, blank=False, default='' | CharField
+
 #### Order Item Model
 
 | Name | Key in db | Validation | Field Type |
@@ -326,6 +374,16 @@ Product | product | on_delete=models.CASCADE, null=True, blank=True, related_nam
 User | user | on_delete=models.PROTECT | ForeignKey to User
 Comment | comment | max_length=1000, blank=True, null=True | TextField
 Rating | rating | default=1 | FloatField
+
+#### Contact Model
+
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
+Name | name | max_length=200 | CharField
+Comment | comment | max_length=1000, blank=True | TextField
+Email | email | max_length=200 | EmailField
+Contact Date | contact_date | default=datetime.now | DateTimeField
+User | user_id | User, null=True, on_delete=models.CASCADE | ForeignKey to User
 
 ---
 
