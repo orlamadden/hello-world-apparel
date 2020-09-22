@@ -25,8 +25,6 @@ Hello World Apparel is the final project built for grading for the Code Institut
     - [**Data Storage Types**](#data-storage-types)
 
 4. [**Technologies Used**](#technologies-used)
-    - [**Front-End Technologies**](#front-end-technologies)
-    - [**Back-End Technologies**](#back-end-technologies)
 
 5. [**Testing**](#testing)
     - [**Validators**](#validators)
@@ -306,7 +304,7 @@ Sometimes a group photo is included as well to show off more mice from the same 
 
 ### Database Models
 
-All models were created with Django's ability to auto-assign a Primary Key (ID).
+All models were created with Django's ability to auto-assign a Primary Key (ID). 
 
 #### User Model
 
@@ -421,6 +419,79 @@ User | user_id | User, null=True, on_delete=models.CASCADE | ForeignKey to User
 - [Balsamiq](https://balsamiq.com/)
 - [Git](https://git-scm.com/about)
 - [GitHub](https://github.com/)
+
+## Testing
+
+---
+
+## Deployment
+
+This project was deployed on Heroku: https://hello-world-apparel.herokuapp.com/
+
+### Running project locally
+
+Follow the instructions below to run this project in your own Interactive Development Environment (IDE), such as VSCode or PyCharm. **Please note:** If you use PyCharm as your IDE, this process is easier with a one click installation of Django.
+
+Make sure that the following are installed on your device (this is necessary):
+
+- [Python 3](https://www.python.org/)
+- [PIP](https://pip.pypa.io/en/stable/installing/)
+- [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03)
+
+You will also need to create free accounts with the following services:
+
+- AWS and set up an S3 bucket
+- Stripe
+
+#### Instructions
+
+1. Save a copy of the github repository located in this repository by clicking the "download zip" button at the top of the page and extracting the zip file to your chosen folder. If you have Git installed on your system, you can clone the repository with the following command.
+
+`https://github.com/orlamadden/hello-world-apparel.git`
+
+2. To install the project's dependencies, it is recommended to create a virtual environment to prevent the dependencies from being installed globally on your system, therefore keeping it in the virtual environment.
+To create a virtual environment for your project, in the Terminal, in the project's root directory, enter:
+
+`python -m venv venv`
+
+and then activate the created virtual environment with
+
+`venv\Scripts\activate`
+
+3. Install all requirements from the requirements.txt file using this command:
+
+    `pip3 -r requirements.txt`
+
+4. In the IDE terminal, use the following command to launch the Django project:
+`python manage.py runserver`
+
+5. In the root directory of the project, create an `env.py` file. Immediately store this file in a `.gitignore` file. This will prevent your sensitive data from being committed and pushed to GitHub.
+
+6. In your `env.py` file, set the environment variables as follows:
+
+```
+os.environ["AWS_ACCESS_KEY_ID"] = "<your key here>"
+os.environ["AWS_S3_REGION_NAME"] = "<your AWS Sregion name here>
+os.environ["AWS_SECRET_ACCESS_KEY"] = "<your key here>"
+os.environ["AWS_STORAGE_BUCKET_NAME"] = "<your AWS Sbucket name here>"
+os.environ["SECRET_KEY"] = "<your secret key here>"
+os.environ["STRIPE_PUBLIC_KEY"] = "<your key here>"
+os.environ["STRIPE_SECRET_KEY"] = "<your key here>"
+os.environ["STRIPE_WH_SECRET"] = "<your key here>"
+```
+7. Create your superuser to access the django admin panel and database with the following command, and then follow the steps to add your admin username and password:
+
+- `python3 manage.py createsuperuser`
+
+8. Next, you'll need to make migrations to create the database schema (outlined above) using the commands as follows:
+- `python3 manage.py makemigrations`
+- `python3 manage.py migrate`
+
+8. The application can now be run locally.
+
+### Deploying to Heroku
+
+
 
 --------
 
