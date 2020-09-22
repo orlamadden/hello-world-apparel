@@ -20,19 +20,23 @@ Hello World Apparel is the final project built for grading for the Code Institut
     - [**Current Features**](#current-features)
     - [**Recommendations for future implementation**](#recommendations-for-future-implementation)
 
-3. [**Technologies Used**](#technologies-used)
+3. [**Information Architecture**](#information-architecture)
+    - [**Database Schema**](#database-schema)
+    - [**Data Storage Types**](#data-storage-types)
+
+4. [**Technologies Used**](#technologies-used)
     - [**Front-End Technologies**](#front-end-technologies)
     - [**Back-End Technologies**](#back-end-technologies)
 
-4. [**Testing**](#testing)
+5. [**Testing**](#testing)
     - [**Validators**](#validators)
     - [**Bugs**](#bugs)
 
-5. [**Deployment**](#deployment)
+6. [**Deployment**](#deployment)
     - [**Local Deployment**](#local-deployment)
     - [**Remote Deployment**](#remote-deployment)
 
-6. [**Credits**](#credits)
+7. [**Credits**](#credits)
     - [**Content**](#content)
     - [**Media**](#media)
     - [**Code**](#code)
@@ -209,6 +213,12 @@ Sometimes a group photo is included as well to show off more mice from the same 
 - When a user selects a product, they are notified of their selection through a success toast message.
 - They are then given the option to continue shopping or view their cart.
 
+### Reviews
+
+#### Leaving a Reviews
+
+#### Current reviews
+
 ### User profile page
 
 #### Billing details
@@ -224,6 +234,98 @@ Sometimes a group photo is included as well to show off more mice from the same 
 #### Toast notification
 
 - When a user updates their billing information they are notified of this change through a success toast message.
+
+### Shopping cart
+
+- The shopping cart page features a summary of all the items the user has added to their shopping cart.
+- Each item includes an image, product name, size (if applicable) SKU, unit price and total price.
+- The user has the ability to adjust the quantity in their cart. A user can also remove an item from their cart. When the quantity is updated. the subtotal will reflect the change.
+- Cart total, delivery total and grand total of the user's cart are reflected in the order summary.
+- A call to action button to proceed to checkout takes the user to the payment section.
+
+#### Toast notification
+
+- When a user adds an item to their cart, a toast notification displays with the item information.
+- A user is notified of the free delivery threshold and how much more they would need to spend to get free delivery.
+- A all to action to visit the checkout is displayed below the item information.
+
+### Checkout page
+
+#### Checkout form
+
+- The checkout page features a form that needs to be filled out by the user.
+- If this is a logged in user's first time to check out, they need to fill out their billing information.
+- Details required are name, address, email address, street address, town/city, postal code, county/state/locality and country.
+- I included 2 custom made secure checkout and fast shipping images on the checkout page. It helps users to feel they can trust the website.
+
+#### Stripe
+
+- Users can complete the checkout process by entering their card details.
+- Payment is handled though the secure Stripe API.
+- Once a user clicks to buy, and if successful payment is made, the user is taken to the checkout success page.
+
+#### Checkout success
+
+- The order confirmation page gives the customer all their order information.
+- An order number is generated on checkout.
+- The user is invited to continue shopping after checkout.
+
+### About page
+
+- The About page features a brief description about Hello World Apparel.
+- The page provides a call to action button at the bottom of this page to visit the shop.
+
+### Contact page
+
+#### Contact form
+
+- The contact page contains a form for the user to fill in to send to the store admin.
+- Name, email address and message are all optional fields.
+- An email is sent to the store admin's email address notifiying them of a new contact enquiry in the admin dashboard.
+- The message can be checked by logging in to the admin area.
+
+#### Toast notification
+
+- When a contact form has been successfully submitted, the user is notified via toast message.
+
+## Recommendations for future implementation
+
+#### Reset password
+
+#### Additional checkout methods
+
+#### Pagination
+
+---
+## Information Architecture
+
+### Database choice
+
+- During development in Gitpod I worked with the standard sqlite3 database which comes installed with Django out of the box.
+- On deployment, the SQL database installed in Heroku is a PostgreSQL database.
+
+### Database Models
+
+All models were created with Django's ability to auto-assign a Primary Key (ID).
+
+#### Order Item Model
+
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
+Order | order | on_delete=models.CASCADE | ForeignKey to Order
+Product | product | on_delete=models.PROTECT | ForeignKey to Product
+Product size | product_size | max_length=2, null=True, blank=True | CharField
+Quantity | quantity | null=False, blank=False, default=0 | IntegerField
+Line Item Total | lineitem_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=False | DecimalField
+
+#### Review Model
+
+| Name | Key in db | Validation | Field Type |
+--- | --- | --- | ---
+Product | product | on_delete=models.CASCADE, null=True, blank=True, related_name="reviews" | ForeignKey to Product
+User | user | on_delete=models.PROTECT | ForeignKey to User
+Comment | comment | max_length=1000, blank=True, null=True | TextField
+Rating | rating | default=1 | FloatField
 
 ---
 
