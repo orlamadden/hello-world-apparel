@@ -107,7 +107,10 @@ For this project, I kept design and color to a minimum so users could focus on t
 
 #### Images
 
-The product images used across the website have been created by me in Photoshop. Aside from programming, a hobby of mine is creating pop culture t-shirt designs, and these are some designs that I have sold over the years. 
+The product images used across the website have been created by me in Photoshop. Aside from programming, a hobby of mine is creating pop culture t-shirt designs, and the designs on Hello World Apparel are some designs that I have created and sold over the past 6 years. 
+
+#### Icons
+Fontawesome icons were used across the website to aid in displaying content and navigation.
 
 ##### back to [top](#table-of-contents)
 
@@ -289,6 +292,7 @@ Sometimes a group photo is included as well to show off more mice from the same 
 ## Recommendations for future implementation
 
 #### Reset password
+- Allow users to reset their password if they forget it.
 
 #### Additional checkout methods
 - For a future update, I would like to include the ability for users to checkout via PayPal as it is a popular checkout method.
@@ -299,8 +303,13 @@ Sometimes a group photo is included as well to show off more mice from the same 
 #### Two Step verification
 - With cybercrime on the rise and the recent trend of many bank applications introducing two-step verification, this would be a nice extra layer of security for users when logging in.
 
-#### Pagination
+#### Custom 404 and 500 pages
+- Create and implement custom pages for HTML status codes of 404 (Page Not Found) and 500 (Internal Server Error). Given the time constraints, this was not possible to implement.
 
+#### Pagination
+- An attempt had been made at implementing pagination on the product listing page. However, there was conflict with sorting and filtering, so due to time constraints, I decided not to implement this.
+
+##### back to [top](#table-of-contents)
 ---
 ## Information Architecture
 
@@ -390,6 +399,7 @@ Email | email | max_length=200 | EmailField
 Contact Date | contact_date | default=datetime.now | DateTimeField
 User | user_id | User, null=True, on_delete=models.CASCADE | ForeignKey to User
 
+##### back to [top](#table-of-contents)
 ---
 
 ## Technologies Used
@@ -427,8 +437,10 @@ User | user_id | User, null=True, on_delete=models.CASCADE | ForeignKey to User
 - [Git](https://git-scm.com/about)
 - [GitHub](https://github.com/)
 
+##### back to [top](#table-of-contents)
+---
 ## Testing
-
+##### back to [top](#table-of-contents)
 ---
 
 ## Deployment
@@ -539,7 +551,7 @@ Hello World Apparel was deployed to Heroku by doing the following:
 
 11. Performed a `git push` to Github. This also pushed the project to Heroku.
 
-12. After the build was completeed, navigated to the 'Open app' button to open the project in the browser.
+12. After the build was completed, navigated to the 'Open app' button to open the project in the browser.
 
 13. Hello World Apparel was successfully deployed.
  
@@ -611,6 +623,7 @@ SOCIALACCOUNT_PROVIDERS = \
 21. Clicked save.
 22. `django-allauth` comes pre-installed with templates for setting up social login, so logging in via Facebook was now available.
  
+ ##### back to [top](#table-of-contents)
  ---
 
  ## Acknowledgements

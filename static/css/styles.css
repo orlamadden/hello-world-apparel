@@ -7,10 +7,19 @@ html {
 }
 
 body {
-    background-color: rgb(253, 196, 122);
+    background: url('https://hello-world-apparel.s3-eu-west-1.amazonaws.com/media/hero-image.jpg') no-repeat center center fixed;
+    background-size: cover;
     height: calc(100vh - 144px);
     color: #555;
     font-family: 'Gothic A1', sans-serif;
+}
+
+.hero {
+    min-height: 500px;
+}
+
+.popular-listings {
+    background-color: #ffffff;
 }
 
 #delivery-banner {
@@ -250,6 +259,10 @@ footer {
 }
 
 @media (max-width: 992px) {
+    .website-cta {
+        font-size: 2.2em;
+    }
+
     .header-container {
         padding-top: 104px;
     }
