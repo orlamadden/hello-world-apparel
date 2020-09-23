@@ -547,7 +547,7 @@ Hello World Apparel was deployed to Heroku by doing the following:
 
 Hello World Apparel has a feature for Facebook users to sign up and log in using their Facebook credentials. The following steps were taken to implement this feature.  
 
-**Please note:** This feature was implemented after the project was deployed to Heroku. I am unsure of how this would work in a local setting.
+**Please note:** This feature was implemented after the project was deployed to Heroku. I am unsure of how this would work in a local setting. Please see the docs for more information - https://developers.facebook.com/docs/
 
 1. Installed django-allauth using the following command:  
 `pip3 install django-allauth`
@@ -566,6 +566,61 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 ```
---------
+4. Also added the following to `settings.py`:
+```
+SOCIALACCOUNT_PROVIDERS = \
+    {'facebook':
+       {'METHOD': 'oauth2',
+        'SCOPE': ['email','public_profile', 'user_friends'],
+        'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+        'FIELDS': [
+            'id',
+            'email',
+            'name',
+            'first_name',
+            'last_name',
+            'verified',
+            'locale',
+            'timezone',
+            'link',
+            'gender',
+            'updated_time'],
+        'EXCHANGE_TOKEN': True,
+        'LOCALE_FUNC': lambda request: 'kr_KR',
+        'VERIFIED_EMAIL': False,
+        'VERSION': 'v2.4'}}
+```
+4. Went to Facebook for Developers via this link - https://developers.facebook.com/. 
+(If you want to implement this feature and do not have a Facebook account, you will need to sign up for one [here](https://www.facebook.com/)).
+5. Create a new app via the dashboard.
+6. Select **For Everything Else**.
+7. Gave my app a name, e.g. HelloWorldApparel, etc. Clicked **Create App**
+8. Selected **Set Up** under the Facebook Login product.
+9. Selected **Web**.
+10. Entered website url, e.g. https://hello-world-apparel.herokuapp.com/ and click save.
+11. Under **Settings > Basic**, copied the App ID and App Secret Key.
+12. Logged in to website admin dashboard. 
+13. Under Sites, added site domain name and display name, e.g. https://hello-world-apparel.herokuapp.com/
+14. Click into **Social Accounts > Social applications** (at the very bottom of the dshboard)
+15. Clicked **Add social application**
+16. Under provider, selected Facebook.
+17. Entered name of social account (same as app name in step 7 for consistency).
+18. Input App ID into Client id (see step 11)
+19. Input App Secret into Secret Key (see step 11)
+20. Under sites, added the site I entered in step 13 from available sites to chosen sites.
+21. Clicked save.
+22. `django-allauth` comes pre-installed with templates for setting up social login, so logging in via Facebook was now available.
+ 
+ ---
+
+ ## Acknowledgements
+
+ ### Code
+
+ ### Media
+ 
+ --------
+
+
 
 For educational purposes only.
