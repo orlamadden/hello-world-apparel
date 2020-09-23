@@ -299,7 +299,12 @@ footer {
 div.custom-form input,
 div.custom-form textarea,
 .custom-form-profile input,
-.custom-form-profile select {
+.custom-form-profile select,
+.custom-form-product input[type="text"],
+.custom-form-product input[type="url"],
+.custom-form-product input[type="number"],
+.custom-form-product textarea,
+.custom-form-product select {
     margin-bottom: 1em;
     border: 1px solid #000;
 }

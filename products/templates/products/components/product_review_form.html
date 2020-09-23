@@ -13,7 +13,6 @@
                         {% if reviews %}
                         {% for review in reviews %}
                         <div class="review-container mt-3">
-                            
                                     <h5 class="font-weight-bold"><i class="fas fa-user mr-2"></i>{{review.user}}</h5>
                                 <p class="">{{review.comment}}</p>
                                 <p class="">{{ review.rating|floatformat:0 }}/5</p>
