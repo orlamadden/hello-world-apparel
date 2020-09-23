@@ -297,7 +297,9 @@ footer {
 }
 
 div.custom-form input,
-div.custom-form textarea {
+div.custom-form textarea,
+.custom-form-profile input,
+.custom-form-profile select {
     margin-bottom: 1em;
     border: 1px solid #000;
 }
