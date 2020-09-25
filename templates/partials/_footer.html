@@ -1,6 +1,6 @@
 <footer>
 	<!-- main footer and content-->
-	<div class="py-5">
+	<div class="py-5 pt-5">
 		<div class="container">
 			<div class="row">
 
@@ -18,23 +18,20 @@
 				<div class="col-lg-7">
 					<div class="row">
 						<div class="col-lg-4">
-							<h6>Header</h6>
+							<h6>Apparel</h6>
 							<ul class="list-unstyled">
-								<li><a href="#">Item here</a></li>
-								<li><a href="#">Item here</a></li>
-								<li><a href="#">Item here</a></li>
-								<li><a href="#">Item here</a></li>
-								<li><a href="#">Item here</a></li>
+								<li><a href="{% url 'products' %}?category=tshirts">T-Shirts</a></li>
+								<li><a href="{% url 'products' %}?category=masks">Masks</a></li>
+								<li><a href="{% url 'products' %}?category=mugs">Mugs</a></li>
+								<li><a href="{% url 'products' %}?category=pins">Pins</a></li>
 							</ul>
 						</div>
 						<div class="col-lg-4">
-							<h6>Header</h6>
+							<h6>Home Goods</h6>
 							<ul class="list-unstyled">
-								<li><a href="#">Item here</a></li>
-								<li><a href="#">Item here</a></li>
-								<li><a href="#">Item here</a></li>
-								<li><a href="#">Item here</a></li>
-								<li><a href="#">Item here</a></li>
+								<li><a href="{% url 'products' %}?category=pillows">Pillows</a></li>
+								<li><a href="#">Tapestries<span class="badge badge-secondary ml-2">Coming soon!</span></a></li>
+								<li><a href="#">Tote Bags<span class="badge badge-secondary ml-2">Coming soon!</span></a></li>
 							</ul>
 						</div>
 						<div class="col-lg-4">
@@ -57,7 +54,7 @@
 		<div class="container">
 			<div class="row align-items-center text-sm text-gray-500">
 				<div class="col-lg-4">
-					<p>2020 Copyright</p>
+					<p>Developed by Orla Madden - 2020</p>
 				</div>
 				<div class="col-lg-8">
 					<ul class="list-inline mb-0 mt-2 mt-md-0 ml-4 text-center text-lg-right">
