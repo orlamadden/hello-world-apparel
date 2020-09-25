@@ -8,8 +8,6 @@
 
 [User Stories Testing](#user-stories-testing)
 [Manual Testing](#manual-testing)
-    - [Testing undertaken on desktop](#testing-undertaken-on-desktop)
-    - [Testing undertaken on tablet and phone devices](#testing-undertaken-on-tablet-and-phone-devices)
 [Bugs](#bugs)
 
 ---
@@ -77,14 +75,30 @@ To ensure the best user experience, I performed multiple manual tests to ensure 
 - iPhone XR
 - Samsung J3
 
+#### Chrome Devtools Lighthouse Report
+
+Mobile:
+![https://res.cloudinary.com/orla2020/image/upload/v1601071112/ms4/hwa-mobile-lighthouse_ckzsgu.png](https://res.cloudinary.com/orla2020/image/upload/v1601071112/ms4/hwa-mobile-lighthouse_ckzsgu.png)
+
+Desktop:
+![https://res.cloudinary.com/orla2020/image/upload/v1601071112/ms4/hwa-desktop-lighthouse_xavfsg.png](https://res.cloudinary.com/orla2020/image/upload/v1601071112/ms4/hwa-desktop-lighthouse_xavfsg.png)
+
 ### Code validation
 
 [W3C HTML Validator](https://validator.w3.org/)
 
 - 5 errors found, 2 warnings.
-   - **_Element li not allowed as child of element div in this context. (Suppressing further errors from this subtree.)_** - this error was found 4 times on the home page. The ```<li>``` tags in the footer were not contained within a ```<ul>``` or ```<ol>``` tag. These errors were a result of not containing the `<li>` tags in the ```<ul>``` or ```<ol>``` tag in the `mobile-top-header.html` tag. These errors were not fixed.
+   - **_Element li not allowed as child of element div in this context. (Suppressing further errors from this subtree.)_** - this error was found 4 times on the home page. The ```<li>``` tags in the footer were not contained within a ```<ul>``` or ```<ol>``` tag. These errors were a result of not containing the `<li>` tags in the parent ```<ul>``` or ```<ol>``` tag in the `mobile-top-header.html` tag. These errors were not fixed.
    - **_Duplicate ID delete-modal_** - there was an id duplication in the navigation menu, this was fixed.
    - **_Unclosed element span_** - there were unclosed `<span>` tags on the product details page, this was fixed.
+
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+- No errors found.
+
+[Python PEP8]((http://pep8online.com/
+
+- Numerous trailing white spaces found throughout all `.py` files.
 
 ## Bugs
 
