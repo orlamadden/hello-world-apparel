@@ -67,7 +67,7 @@ As a user of the site I want and/or expect:
 - to create an account
 - to view ratings on a product to aid in my decision making
 - to contact the company with a question
-- to use a search box to find something specific
+- to search for items
 - to add items to a cart
 - feedback when I interact with forms
 - a clear terms and conditions page
@@ -193,11 +193,6 @@ This section will outline all the features of Hello World Apparel implemented by
 - When users click on a product card, they are taken to the details page of the selected product.
 - If a super user is logged in, they have easy access to edit or delete a product.
 
-#### Pagination
-
-- Pagination was implemented using Paginator.
-- A maximum of 12 products is displayed per page.
-
 ### Product details page
 
 #### Listing details
@@ -216,9 +211,14 @@ Sometimes a group photo is included as well to show off more mice from the same 
 
 ### Reviews
 
-#### Leaving a Reviews
+#### Leaving a Review
+- To leave a review, a user must purchase an item.
+- The review form becomes available on the product details page after the item is purchased.
+- Customers who purchased the item can leave a comment and a rating.
+- The review is published immediately.
 
 #### Current reviews
+- Current reviews are displayed on the left side of the product page, after the product description.
 
 ### User profile page
 
@@ -308,6 +308,12 @@ Sometimes a group photo is included as well to show off more mice from the same 
 
 #### Pagination
 - An attempt had been made at implementing pagination on the product listing page. However, there was conflict with sorting and filtering, so due to time constraints, I decided not to implement this.
+
+#### Admin Dashboard for super user
+- Under the Product Management tab, I'd like to include a dashboard that would include:
+  - adding products
+  - a dropdown selector of current products to open up and edit
+  - a sales graph that includes the total of sales per month and the most popular product by sales
 
 ##### back to [top](#table-of-contents)
 ---
@@ -440,6 +446,9 @@ User | user_id | User, null=True, on_delete=models.CASCADE | ForeignKey to User
 ##### back to [top](#table-of-contents)
 ---
 ## Testing
+
+The write up for Testing can be found here: [TESTING.md](https://github.com/orlamadden/hello-world-apparel/blob/master/TESTING.md)
+
 ##### back to [top](#table-of-contents)
 ---
 
@@ -626,14 +635,22 @@ SOCIALACCOUNT_PROVIDERS = \
  ##### back to [top](#table-of-contents)
  ---
 
- ## Acknowledgements
+ ## Credits
 
  ### Code
+ - Without the amazing videos from the Code Institute and Chris Zielinski, this project would not have been possible. While every attempt has been made to make this website my own, some elements and code may remain the same, especially setting up Stripe.
+ - This course from Brad Traversy was used for assisting in creating the Contact page - https://www.udemy.com/course/python-django-dev-to-deployment/learn/lecture/12056484#overview
+ - Implementing the Facebook login was done with this help of this Youtube video - https://www.youtube.com/watch?v=kp1JINkOdTw
 
  ### Media
+ - Hero image mock up was downloaded from [here](https://mockupsforfree.com/down?q=Pillow%20On%20The%20Sofa%20Mockup). I used Photoshop to include my design on the pillow.
+ - All product images were created by me in Phototshop.
+
+ ### Content
+ - Terms and conditions page referenced from [Asos](https://www.asos.com/terms-and-conditions/)
+ - FAQ page referenced from [Teefury](https://teefury.com/apps/help-center#hc-can-i-make-a-change-to-my-order-or-cancel-it)
+ - Privacy policy page referenced from Asos and Teefury (links above)
  
  --------
-
-
 
 For educational purposes only.
