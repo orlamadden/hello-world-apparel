@@ -19,3 +19,10 @@ def terms_and_conditions_view(request, *args, **kwargs):
     Renders view for the terms and conditions page
     """
     return render(request, "terms_and_conditions.html")
+
+
+def faq_view(request, *args, **kwargs):
+    """
+    Renders view for the terms and conditions page
+    """
+    return render(request, "faq.html")

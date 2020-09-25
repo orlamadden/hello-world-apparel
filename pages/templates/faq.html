@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %}FAQ | Hello World Apparel{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+	<div class="row mt-4 mb-4">
+		<div class="col-12">
+			<div id="breadcrumbs">
+				<a class="category-text" href="{% url 'home' %}">Home </a>
+				<span class="ml-2">/<span>
+            <a href="#" class="category-text ml-2 font-weight-bold">FAQ </a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-8 mt-3">
+            <h1 class="font-weight-bold  mb-5">Frequently Asked Questions</h1>
+            <div id="accordion">
+  <div class="card mb-4 mt-4">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          How do I create an account?
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        You can create an account by clicking the "My Account" link at the top of the page, or simply click <a href="{% url 'account_signup' %}">here</a>.
+      </div>
+    </div>
+  </div>
+  <div class="card mb-4 mt-4">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          How long will it take my order to arrive?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        The majority of our orders ship within 48 hours, but it can take up to 3 business days to print before shipping. Once your order is shipped, you will receive a shipping confirmation email with your tracking number. While we would like to ensure your order is delivered on time, due to we use outside delivery companies (An Post, DHL) we cannot guarantee delivery times, or be held responsible for conditions beyond our control such as weather, service interruptions, etc.
+      </div>
+    </div>
+  </div>
+  <div class="card mb-4 mt-4">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          What if I make a mistake in my order?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+       Not a problem! Please visit the <a href="{% url 'contact' %}">contact page</a> and we will be happy to help you with your order.
+      </div>
+    </div>
+  </div>
+  <div class="card mb-4 mt-4">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+          I have an idea for a design on your website, can I submit an idea?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+       Of course! We are passionate about producing apparel and accessories that make people smile. If you have an idea for a design, please visit the <a href="{% url 'contact' %}">contact page</a> and have a chat with us. If we like your idea, we'll send a few coupons your way (and 2 free t-shirts of your design)!
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
