@@ -96,6 +96,12 @@ Desktop:
 
 - No errors found.
 
+[JShint.com](https://jshint.com/)
+
+- 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+- 'template literal syntax' is only available in ES6 (use 'esversion: 6').
+- Other than the comments above, no issues were found.
+
 [Python PEP8]((http://pep8online.com/
 
 - Numerous trailing white spaces found throughout all `.py` files.
