@@ -6,13 +6,11 @@
 
 ## Table of Contents
 
-1. [User Stories Testing](#user-stories-testing)
-2. [Manual Testing](#manual-testing)
+[User Stories Testing](#user-stories-testing)
+[Manual Testing](#manual-testing)
     - [Testing undertaken on desktop](#testing-undertaken-on-desktop)
     - [Testing undertaken on tablet and phone devices](#testing-undertaken-on-tablet-and-phone-devices)
-3. [Bugs discovered](#bugs-discovered)
-    - [Solved bugs](#solved-bugs)
-    - [Unsolved bugs](#unsolved-bugs)
+[Bugs](#bugs)
 
 ---
 ## User Stories Testing
@@ -58,6 +56,35 @@ As a user of the site I want and/or expect:
 - after all user purchased a product, they received an order summary containing details of their order
 13. to find information about past orders I have made :white_check_mark:
 - on the user profile page, all users found orders they made with an order summary, date, time and order number :white_check_mark:
+
+## Manual Testing
+
+To ensure the best user experience, I performed multiple manual tests to ensure the app worked across various devices and on multiple browsers.
+
+#### Browser Compatibility
+
+- Chrome - no issues.
+- Firefox - no issues.
+- Safari - no issues.
+- Microsoft Edge - no issues.
+- Opera - no issues.
+- Internet Explorer - no tests performed on this browser, sorry IE!
+
+#### Devices
+
+- iPhone 11 Pro MAX
+- iPad
+- iPhone XR
+- Samsung J3
+
+### Code validation
+
+[W3C HTML Validator](https://validator.w3.org/)
+
+- 5 errors found, 2 warnings.
+   - **_Element li not allowed as child of element div in this context. (Suppressing further errors from this subtree.)_** - this error was found 4 times on the home page. The ```<li>``` tags in the footer were not contained within a ```<ul>``` or ```<ol>``` tag. These errors were a result of not containing the `<li>` tags in the ```<ul>``` or ```<ol>``` tag in the `mobile-top-header.html` tag. These errors were not fixed.
+   - **_Duplicate ID delete-modal_** - there was an id duplication in the navigation menu, this was fixed.
+   - **_Unclosed element span_** - there were unclosed `<span>` tags on the product details page, this was fixed.
 
 ## Bugs
 
