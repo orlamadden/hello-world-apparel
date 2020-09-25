@@ -89,7 +89,7 @@ Desktop:
 
 - 5 errors found, 2 warnings.
    - **_Element li not allowed as child of element div in this context. (Suppressing further errors from this subtree.)_** - this error was found 4 times on the home page. The ```<li>``` tags in the footer were not contained within a ```<ul>``` or ```<ol>``` tag. These errors were a result of not containing the `<li>` tags in the parent ```<ul>``` or ```<ol>``` tag in the `mobile-top-header.html` tag. These errors were not fixed.
-   - **_Duplicate ID delete-modal_** - there was an id duplication in the navigation menu, this was fixed.
+   - **_Duplicate ID user-options_** - there was an id duplication in the navigation menu, this was fixed.
    - **_Unclosed element span_** - there were unclosed `<span>` tags on the product details page, this was fixed.
 
 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
