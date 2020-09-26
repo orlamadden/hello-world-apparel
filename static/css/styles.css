@@ -24,6 +24,9 @@ body {
 
 #delivery-banner {
     background-color: var(--orange);
+    -webkit-box-shadow: -1px 4px 8px -3px rgba(0,0,0,0.3);
+    -moz-box-shadow: -1px 4px 8px -3px rgba(0,0,0,0.3);
+    box-shadow: -1px 4px 8px -3px rgba(0,0,0,0.3);
 }
 
 .website-cta {
