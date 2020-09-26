@@ -16,10 +16,10 @@ To test the website's checkout functionality, use the following payment credenti
     - [**Business goals**](#business-goals)
     - [**User Stories**](#user-stories)
     - [**Design**](#design)
-        - [**Framework**](#framework)
-        - [**Color Scheme**](#color-scheme)
+        - [**Font**](#font)
+        - [**Colour Scheme**](#colour-scheme)
+        - [**Images**](#images)
         - [**Icons**](#icons)
-        - [**Typography**](#typography)
     - [**Wireframes**](#wireframes)
 
 2. [**Features**](#features)
@@ -27,8 +27,8 @@ To test the website's checkout functionality, use the following payment credenti
     - [**Recommendations for future implementation**](#recommendations-for-future-implementation)
 
 3. [**Information Architecture**](#information-architecture)
-    - [**Database Schema**](#database-schema)
-    - [**Data Storage Types**](#data-storage-types)
+    - [**Database Choice**](#database-choice)
+    - [**Database Models**](#database-models)
 
 4. [**Technologies Used**](#technologies-used)
 
@@ -39,9 +39,9 @@ To test the website's checkout functionality, use the following payment credenti
     - [**Remote Deployment**](#remote-deployment)
 
 7. [**Credits**](#credits)
-    - [**Content**](#content)
-    - [**Media**](#media)
     - [**Code**](#code)
+    - [**Media**](#media)
+    - [**Content**](#content)
     - [**Acknowledgements**](#acknowledgements)
 
 ---
@@ -99,7 +99,7 @@ It was important to keep the design simple for Hello World Apaprel. Some ecommer
 
 The font of choice for this project is Gothic A1 from Google fonts. I chose this font as it is simple and characteristc. The font is clean and gives off a sense of fun for Hello World Apparel as it sells humerous products.
 
-#### Colour
+#### Colour Scheme
 
 For this project, I kept design and color to a minimum so users could focus on the core functionality of the website. The primary colours of the website is orange, white, black and light grey. Orange is used in moderation, primarily for bringing important information to attention, or used as the primary call to action on a page. The light colours of white and grey help the orange to stand out so user's notice it. The choice of colour was inspired from one of my favourite websites, [Loot Crate](https://www.lootcrate.com/).
 
