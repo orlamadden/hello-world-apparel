@@ -334,6 +334,21 @@ div.custom-form textarea,
     .header-container {
         padding-top: 104px;
     }
+
+    .icon_number {
+        height: 1.2rem;
+        width: 1.2rem;
+        top: 0.4rem;
+        right: 1.8rem;
+        color: #fff;
+        background: var(--orange);
+        font-size: 0.8rem;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 99;
+    }
+
+
 }
 
 @media (max-width: 767px) {
@@ -341,4 +356,18 @@ div.custom-form textarea,
     .user-management .or {
         flex-direction: row;
     }
+
+    .icon_number {
+        height: 1.2rem;
+        width: 1.2rem;
+        top: 0.4rem;
+        right: 1.8rem;
+        color: #fff;
+        background: var(--orange);
+        font-size: 0.8rem;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 99;
+    }
+
 }
