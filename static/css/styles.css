@@ -50,6 +50,11 @@ body {
     color: #555 !important;
 }
 
+.name-profile {
+    color: var(--orange);
+    font-weight: bold;
+}
+
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -67,13 +72,13 @@ body {
 }
 
 .icon_number {
-    height: 1.50rem;
-    width: 1.50rem;
-    top: 0.85rem;
-    right: 2rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    top: 0.1rem;
+    right: 1rem;
     color: #fff;
     background: var(--orange);
-    font-size: 1rem;
+    font-size: 0.8rem;
     border-radius: 50%;
     position: absolute;
     z-index: 99;

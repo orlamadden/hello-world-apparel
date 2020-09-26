@@ -35,13 +35,12 @@
 </head>
 
 <body>
-
 	<!-- header block -->
 	<header class="container-fluid fixed-top">
 		<div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex pb-2">
-			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-				<a href="{% url 'home' %}" class="nav-link main-logo-link">
-					<h2 class="logo-font text-white my-0"><strong>Hello World Apparel</strong></h2>
+			<div class="nav-main-logo my-auto col-12 col-lg-4">
+				<a class="nav-link main-logo-link" aria-label="Home" href="{% url 'home' %}">
+					<h2 class="font-weight-bold text-white my-0"><strong>Hello World Apparel</strong></h2>
 				</a>
 			</div>
 			<!-- search bar -->
@@ -52,7 +51,7 @@
 						<div class="input-group-append">
 							<button class="form-control btn" type="submit">
                                 <span class="icon text-white">
-                                    <i class="fas fa-search"></i>
+                                    <i class="fas fa-search fa-lg"></i>
                                 </span>
                             </button>
 						</div>
@@ -60,21 +59,20 @@
 				</form>
 			</div>
 			<!-- user management section -->
-			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+			<div class="col-12 col-lg-4 my-auto">
 				<ul class="list-inline list-unstyled text-center text-lg-right my-0">
 					<li class="list-inline-item dropdown">
 						<a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">
 							<div class="text-center">
 								<div><i class="fas fa-user fa-lg"></i></div>
-                                {% if request.user.is_authenticated %}
-                                <p class="my-0">Hi, {{ request.user }}</p>
-                                {% else %}
-								<p class="my-0">My Account</p>
-                                {% endif %}
 							</div>
 						</a>
-						<div class="dropdown-menu border-0" aria-labelledby="user-options">
+						<div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options">
+							{% if request.user.is_authenticated %}
+							<span class="dropdown-item name-profile">Hi, {{ request.user }}</span>
+							<div class="dropdown-divider"></div>
+							{% endif %}
 							{% if request.user.is_authenticated %}
 							{% if request.user.is_superuser %}
 							<a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -93,13 +91,11 @@
 							href="{% url 'view_cart' %}">
 							<div class="text-center">
 								<div><i class="fas fa-shopping-cart fa-lg"></i></div>
-								<p class="my-0">
-									{% if grand_total %}
-									${{ grand_total|floatformat:2 }}
-									{% else %}
-									$0.00
-									{% endif %}
-								</p>
+								{% if product_count %}
+								<span class="my-0 icon_number">
+									{{ product_count }}
+								</span>
+								{% endif %}
 							</div>
 						</a>
 					</li>
