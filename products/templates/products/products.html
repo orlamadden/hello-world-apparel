@@ -18,17 +18,17 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container-fluid pb-5">
+<div class="container pb-5">
 	<div class="row">
-		<div class="col text-center mt-3">
-			<h2 class="logo-font">Products</h2>
+		<div class="col-12 mt-3">
+			<h2 class="font-weight-bold mt-3">All Products</h2>
 		</div>
 	</div>
 	<div class="row">
-		<div class="product-container col-10 offset-1">
+		<div class="product-container col-12">
 			<div class="row mt-1 mb-2"></div>
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-3 d-none d-md-block mt-3">
 					<h6>Filter by Category</h6>
 					<ul class="nav flex-column">
 						<li class="nav-item">
@@ -86,7 +86,7 @@
 									{% else %}
 									<a href="{% url 'product_detail' product.id %}">
 										<img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-available-image.png" alt="{{ product.name }}">
-                                </a>
+                                        </a>
 										{% endif %}
 										<div class="card-body pb-0">
 											<h6 class="mb-2"><strong>{{ product.name }}</strong></h6>
@@ -95,6 +95,13 @@
 											<div class="row">
 												<div class="col">
 													<p class="text-left price-tag">€{{ product.price }}</p>
+                                                    {% if product.category %}
+                                                    <p class="font-weight-bold small mt-1 mb-0">
+                                                    <span class="text-muted">
+                                                    {{ product.category.friendly_name }}
+                                                </span>
+                                            </p>
+                                            {% endif %}
 												</div>
 											</div>
 										</div>
