@@ -66,6 +66,19 @@ body {
     box-shadow: -1px 27px 46px -19px rgba(0,0,0,0.2);
 }
 
+.icon_number {
+    height: 1.50rem;
+    width: 1.50rem;
+    top: 0.85rem;
+    right: 2rem;
+    color: #fff;
+    background: var(--orange);
+    font-size: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 99;
+}
+
 /* toasts */
 
 .toast-container {
@@ -185,7 +198,7 @@ div.cart-summary {
 /* footer section */
 
 footer {
-    background-color: #e7e7e7;
+    background-color: #f3f3f3;
 }
 
 /* Allauth form formatting */

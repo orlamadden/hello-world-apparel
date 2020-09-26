@@ -112,7 +112,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 				{% include 'partials/_mobile-header.html' %}
-                {% include 'partials/_navbar.html' %}
+				{% include 'partials/_navbar.html' %}
 			</nav>
 		</div>
 		<div id="delivery-banner" class="row text-center">
@@ -127,17 +127,17 @@
 	{% if messages %}
 	<div class="toast-container">
 		{% for message in messages %}
-        {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'partials/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'partials/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'partials/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'partials/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
+		{% with message.level as level %}
+		{% if level == 40 %}
+		{% include 'partials/toasts/toast_error.html' %}
+		{% elif level == 30 %}
+		{% include 'partials/toasts/toast_warning.html' %}
+		{% elif level == 25 %}
+		{% include 'partials/toasts/toast_success.html' %}
+		{% else %}
+		{% include 'partials/toasts/toast_info.html' %}
+		{% endif %}
+		{% endwith %}
 		{% endfor %}
 	</div>
 	{% endif %}
@@ -153,9 +153,9 @@
 
 	<!-- javascript block -->
 	{% block postloadjs %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
+	<script type="text/javascript">
+		$('.toast').toast('show');
+	</script>
 	{% endblock %}
 
 </body>
