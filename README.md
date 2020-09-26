@@ -1,12 +1,18 @@
 # Hello World Apparel
 
-Hello World Apparel is the final project built for grading for the Code Institute. It is an ecommerce store that combines front-end and back-end frameworks.
+Hello World Apparel is the final project built for grading for the Code Institute. It is an ecommerce store that combines front-end and back-end frameworks. It is an ecommerce platform that was built to sell high-quality apparel and products that primarily sells t-shirts, mugs, pins, pillows and masks. The store contains designs that I have created myself and sold over the past 5 years.
+
+To test the website's checkout functionality, use the following payment credentials:
+
+**Card number:** 4242 4242 4242 4242
+**Expiry date:** Any date in the future
+**CV2 number:** Any 3 digits
+**ZIP**: 42424
 
 ---
 
 ## Table of Contents
 1. [**UX**](#ux)
-    - [**Project purpose**](#project-purpose)
     - [**Business goals**](#business-goals)
     - [**User Stories**](#user-stories)
     - [**Design**](#design)
@@ -27,8 +33,6 @@ Hello World Apparel is the final project built for grading for the Code Institut
 4. [**Technologies Used**](#technologies-used)
 
 5. [**Testing**](#testing)
-    - [**Validators**](#validators)
-    - [**Bugs**](#bugs)
 
 6. [**Deployment**](#deployment)
     - [**Local Deployment**](#local-deployment)
@@ -43,10 +47,6 @@ Hello World Apparel is the final project built for grading for the Code Institut
 ---
 
 ## UX
-
-### Project purpose
-
-Hello World Apparel was built as the final milestone project for the Code Institute Full Stack Web Development diploma. It is an ecommerce platform that was built to sell high-quality apparel and products to the developer community. The website primarily sells t-shirts, mugs, pins and masks. 
 
 ### Business Goals
 
@@ -66,15 +66,14 @@ As a user of the site I want and/or expect:
 - to view details about a product I like on the website
 - to create an account
 - to view ratings on a product to aid in my decision making
-- to contact the company with a question
+- to contact the company
 - to search for items
 - to add items to a cart
 - feedback when I interact with forms
 - a clear terms and conditions page
 - to read a FAQ
 - to purchase a product with a credit card
-- to login using my social media account (nice to have, will try)
-- an order summary of an order I just submitted
+- an overview of an order I just placed
 - to find information about past orders I have made
 
 ### Wireframes
@@ -90,6 +89,7 @@ Each link below contains a desktop, tablet and mobile view for each of the respe
 - Single product detail page
 - Shopping cart page
 - Checkout page
+- Contact page
 
 ### Design
 
@@ -122,7 +122,7 @@ This section will outline all the features of Hello World Apparel implemented by
 
 ### Current Features
 
-### All pages
+### :page_facing_up: All pages
 
 #### Top navbar
 
@@ -140,14 +140,14 @@ This section will outline all the features of Hello World Apparel implemented by
    - Office kits: navigates to an apparel bundle
    - On sale: navigates to items that are on sale
 
-### Home page
+### :page_facing_up: Home page
 
 #### Best sellers
 
 - The best sellers list on the home page are product listings that are marked as featured by the site admin
 - The featured option is a boolean value that is in the Product model
 
-### Sign up page
+### :page_facing_up: Sign up page
 
 #### Registration Form
 
@@ -162,7 +162,7 @@ This section will outline all the features of Hello World Apparel implemented by
 - Once they complete this step, they will need to verify their email address.
 - Upon verification, they can access Hello World Apparel using their Facebook details.
 
-### Login page
+### :page_facing_up: Login page
 
 #### Log in form
 
@@ -173,7 +173,7 @@ This section will outline all the features of Hello World Apparel implemented by
 
 - A user can log in using their Facebook credentials once they have completed the socail registration process in the previous section.
 
-### Product listings page
+### :page_facing_up: Product listings page
 
 #### Sort products
 
@@ -193,7 +193,7 @@ This section will outline all the features of Hello World Apparel implemented by
 - When users click on a product card, they are taken to the details page of the selected product.
 - If a super user is logged in, they have easy access to edit or delete a product.
 
-### Product details page
+### :page_facing_up: Product details page
 
 #### Listing details
 
@@ -209,7 +209,7 @@ Sometimes a group photo is included as well to show off more mice from the same 
 - When a user selects a product, they are notified of their selection through a success toast message.
 - They are then given the option to continue shopping or view their cart.
 
-### Reviews
+### :page_facing_up: Reviews
 
 #### Leaving a Review
 - To leave a review, a user must purchase an item.
@@ -220,7 +220,7 @@ Sometimes a group photo is included as well to show off more mice from the same 
 #### Current reviews
 - Current reviews are displayed on the left side of the product page, after the product description.
 
-### User profile page
+### :page_facing_up: User profile page
 
 #### Billing details
 
@@ -236,7 +236,7 @@ Sometimes a group photo is included as well to show off more mice from the same 
 
 - When a user updates their billing information they are notified of this change through a success toast message.
 
-### Shopping cart
+### :page_facing_up: Shopping cart
 
 - The shopping cart page features a summary of all the items the user has added to their shopping cart.
 - Each item includes an image, product name, size (if applicable) SKU, unit price and total price.
@@ -250,7 +250,7 @@ Sometimes a group photo is included as well to show off more mice from the same 
 - A user is notified of the free delivery threshold and how much more they would need to spend to get free delivery.
 - A all to action to visit the checkout is displayed below the item information.
 
-### Checkout page
+### :page_facing_up: Checkout page
 
 #### Checkout form
 
@@ -271,12 +271,12 @@ Sometimes a group photo is included as well to show off more mice from the same 
 - An order number is generated on checkout.
 - The user is invited to continue shopping after checkout.
 
-### About page
+### :page_facing_up: About page
 
 - The About page features a brief description about Hello World Apparel.
 - The page provides a call to action button at the bottom of this page to visit the shop.
 
-### Contact page
+### :page_facing_up: Contact page
 
 #### Contact form
 
