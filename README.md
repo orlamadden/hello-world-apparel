@@ -641,7 +641,7 @@ SOCIALACCOUNT_PROVIDERS = \
  - Without the amazing videos from the Code Institute and Chris Zielinski, this project would not have been possible. While every attempt has been made to make this website my own, some elements and code may remain the same, especially setting up Stripe.
  - This course from Brad Traversy was used for assisting in creating the Contact page - https://www.udemy.com/course/python-django-dev-to-deployment/learn/lecture/12056484#overview
  - Implementing the Facebook login was done with the help of this Youtube video - https://www.youtube.com/watch?v=kp1JINkOdTw
- - Review product implementation for my product details page and circular shopping cart counter icon was sourced and amended to meet my needs from this past CI student's [Github repository](https://github.com/nemixu/Milestone4/).
+ - Review product implementation for my product details page and circular shopping cart counter icon was sourced and amended to meet my needs from CI student's (Stevo) [Github repository](https://github.com/nemixu/Milestone4/).
 
  ### Media
  - Hero image mock up was downloaded from [here](https://mockupsforfree.com/down?q=Pillow%20On%20The%20Sofa%20Mockup). I used Photoshop to include my design on the pillow.
