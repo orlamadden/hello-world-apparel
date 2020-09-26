@@ -68,7 +68,7 @@
 							</p>
 						</div>
 						<div class="col-12 col-md-8 text-md-right">
-							<p class="mb-0">{{ item.quantity }} @ ${{ item.product.price }} each</p>
+							<p class="mb-0">{{ item.quantity }} @ €{{ item.product.price }} each</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -173,7 +173,7 @@
 						<p class="mb-0 text-black font-weight-bold">Order Total</p>
 					</div>
 					<div class="col-12 col-md-8 text-md-right">
-						<p class="mb-0">{{ order.order_total }}</p>
+						<p class="mb-0">€{{ order.order_total }}</p>
 					</div>
 				</div>
 				<!-- delivery cost of order -->
@@ -182,7 +182,7 @@
 						<p class="mb-0 text-black font-weight-bold">Delivery</p>
 					</div>
 					<div class="col-12 col-md-8 text-md-right">
-						<p class="mb-0">{{ order.delivery_cost }}</p>
+						<p class="mb-0">€{{ order.delivery_cost }}</p>
 					</div>
 				</div>
 				<!-- grand total of order -->
@@ -191,7 +191,7 @@
 						<p class="mb-0 text-black font-weight-bold">Grand Total</p>
 					</div>
 					<div class="col-12 col-md-8 text-md-right">
-						<p class="mb-0">{{ order.grand_total }}</p>
+						<p class="mb-0">€{{ order.grand_total }}</p>
 					</div>
 				</div>
 			</div>
@@ -205,11 +205,8 @@
 						<span class="text-uppercase">Back to Profile</span>
 					</a>
 					{% else %}
-					<a href="{% url 'products' %}?category=on_sale" class="btn orange-btn text-white rounded-4 my-2">
-						<span class="icon mr-2">
-                            <i class="fas fa-gifts"></i>
-                        </span>
-						<span>Continue shopping</span>
+					<a href="{% url 'products' %}" class="btn orange-btn text-white rounded-4 my-2">
+						<span><i class="fas fa-arrow-left mr-2"></i>Continue shopping</span>
 					</a>
 					{% endif %}
 				</div>
