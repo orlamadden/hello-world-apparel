@@ -328,16 +328,12 @@ div.custom-form textarea,
 
 @media (max-width: 992px) {
 
-    .logo-font {
-        font-size: 0.5em;
-    }
-
     .website-cta {
         font-size: 2.2em;
     }
 
     .header-container {
-        padding-top: 104px;
+        padding-top: 90px;
     }
 
     .icon_number {
@@ -363,6 +359,10 @@ div.custom-form textarea,
 }
 
 @media (max-width: 767px) {
+
+    .website-cta {
+        font-size: 2.6em;
+    }
 
     .user-management .or {
         flex-direction: row;
