@@ -1,13 +1,13 @@
 # Hello World Apparel
 
-Hello World Apparel is the final project built for grading for the Code Institute. It is an ecommerce store that combines front-end and back-end frameworks. It is an ecommerce platform that was built to sell high-quality apparel and products that primarily sells t-shirts, mugs, pins, pillows and masks. The store contains designs that I have created myself and sold over the past 5 years.
+Hello World Apparel is the final project built for grading for the Code Institute. It is an ecommerce store that combines front-end and back-end frameworks. The platform that was built to sell high-quality apparel and products that primarily sells t-shirts, mugs, pins, pillows and masks. The store contains designs that I myself have created and sold over the past 5 years. Eventually I would like to use this website as a starting point to flesh out and make it available to the public to buy products I have created.
 
 To test the website's checkout functionality, use the following payment credentials:
 
-**Card number:** 4242 4242 4242 4242
-**Expiry date:** Any date in the future
-**CV2 number:** Any 3 digits
-**ZIP**: 42424
+- **Card number:** 4242 4242 4242 4242
+- **Expiry date:** Any date in the future
+- **CV2 number:** Any 3 digits
+- **ZIP**: 42424
 
 ---
 
@@ -101,7 +101,7 @@ The font of choice for this project is Gothic A1 from Google fonts. I chose this
 
 #### Colour
 
-For this project, I kept design and color to a minimum so users could focus on the core functionality of the website. The primary colours of the website is orange, white, black and light grey. Orange is used in moderation, primarily for bringing important information to attention, or used as the primary call to action on a page. The light colours of white and grey help the orange to stand out so user's notice it.
+For this project, I kept design and color to a minimum so users could focus on the core functionality of the website. The primary colours of the website is orange, white, black and light grey. Orange is used in moderation, primarily for bringing important information to attention, or used as the primary call to action on a page. The light colours of white and grey help the orange to stand out so user's notice it. The choice of colour was inspired from one of my favourite websites, [Loot Crate](https://www.lootcrate.com/).
 
 ![https://res.cloudinary.com/orla2020/image/upload/v1600609779/ms4/ms4-palette_h7zshy.png](https://res.cloudinary.com/orla2020/image/upload/v1600609779/ms4/ms4-palette_h7zshy.png)
 
@@ -640,17 +640,18 @@ SOCIALACCOUNT_PROVIDERS = \
  ### Code
  - Without the amazing videos from the Code Institute and Chris Zielinski, this project would not have been possible. While every attempt has been made to make this website my own, some elements and code may remain the same, especially setting up Stripe.
  - This course from Brad Traversy was used for assisting in creating the Contact page - https://www.udemy.com/course/python-django-dev-to-deployment/learn/lecture/12056484#overview
- - Implementing the Facebook login was done with this help of this Youtube video - https://www.youtube.com/watch?v=kp1JINkOdTw
+ - Implementing the Facebook login was done with the help of this Youtube video - https://www.youtube.com/watch?v=kp1JINkOdTw
+ - Review product implementation for my product details page and circular shopping cart counter icon was sourced and amended to meet my needs from this past CI student's [Github repository](https://github.com/nemixu/Milestone4/).
 
  ### Media
  - Hero image mock up was downloaded from [here](https://mockupsforfree.com/down?q=Pillow%20On%20The%20Sofa%20Mockup). I used Photoshop to include my design on the pillow.
  - All product images were created by me in Phototshop.
 
  ### Content
- - Terms and conditions page referenced from [Asos](https://www.asos.com/terms-and-conditions/)
- - FAQ page referenced from [Teefury](https://teefury.com/apps/help-center#hc-can-i-make-a-change-to-my-order-or-cancel-it)
- - Privacy policy page referenced from Asos and Teefury (links above)
- 
+ - Terms and conditions page referenced from [Asos](https://www.asos.com/terms-and-conditions/).
+ - FAQ page referenced from [Teefury](https://teefury.com/apps/help-center#hc-can-i-make-a-change-to-my-order-or-cancel-it).
+ - Privacy policy page referenced from Asos and Teefury (links above).
+ - All other text content was written by me.
  --------
 
 For educational purposes only.
