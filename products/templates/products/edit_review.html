@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
-{% block title %} DN Fitness | {{ page_title }} {% endblock %}
+{% block title %} {{ page_title }} {% endblock %}
 {% load static %}
 
 {% block page_header %}
     <div class="container header-container">
-        <div class="row">
+        <div class="row mt-4 mb-4">
             <div class="col">
             
             </div>
@@ -13,25 +13,20 @@
 {% endblock  %}
 
 {% block content %}
-    <div class="overlay-delete"></div>
-    <div class="white-overlay"></div>
-    <div class="container mt-2 text-center">
+    <div class="overlay"></div>
+    <div class="container mt-2">
         <div class="row mb-5">
-            <div class="col-md-6 offset-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="text-center text-black">Update your review</h3>
-                        <form action="{% url 'edit_review' product.id %}" method="POST" class="text-center text-black mb-5">
-                            <div class="col-12 col-lg-8 offset-lg-2">
-                                {% csrf_token %}
-                                {{ review_form }}
-                            </div>
-                            <div class="col-sm-12 col-12 text-center">
-                                <button class="btn orange-btn text-white" aria-label="update review button">Update your review</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <div class="col-md-6">
+                <h3 class="font-weight-bold mb-3">Update your review</h3>
+                    <form action="{% url 'edit_review' product.id %}" method="POST" class="mb-5">
+                        <div class="col-12 col-lg-7">
+                            {% csrf_token %}
+                            {{ review_form }}
+                        </div>
+                        <div class="col-sm-12 col-12">
+                            <button class="btn orange-btn text-white mt-3" aria-label="update review button">Update your review</button>
+                        </div>
+                    </form>
             </div>
         </div>
     </div>
