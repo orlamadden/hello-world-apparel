@@ -19,9 +19,7 @@
 				Cozy up this Winter with our new Pillow collection
 			</h1>
 			<div class="my-5">
-				<h4>
-					<a href="{% url 'products' %}?category=pillows"
-						class="orange-btn btn btn-lg rounded-lg text-white py-3">Shop Now</a>
+				<h4><a href="{% url 'products' %}?category=pillows" class="orange-btn btn btn-lg rounded-lg text-white py-3">Shop Now</a>
 				</h4>
 			</div>
 		</div>
@@ -29,29 +27,29 @@
 </div>
 
 <div class="container-fluid popular-listings mt-5 pt-5 pb-5">
-<div class="row h-100">
-    <div class="col-12 text-center">
-        <h2>Best Sellers</h2>
-        <p>Discover apparel and accessories to brighten up your wardrobe and home, all in one place.</p>
+    <div class="row h-100">
+        <div class="col-12 text-center">
+            <h2>Best Sellers</h2>
+            <p>Discover apparel and accessories to brighten up your wardrobe and home, all in one place.</p>
         </div>
-		{% for product in featured_listings %}
-		<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-3 mt-3">
-			<div class="card h-100 product-card">
-				{% if product.image %}
-				<a href="{% url 'product_detail' product.id %}">
-					<img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-					{% else %}
-					<a href="{% url 'product_detail' product.id %}">
-						<img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-available-image.png" alt="{{ product.name }}">
-                                </a>
-						{% endif %}
-						<div class="card-body pb-0">
-							<h6 class="mb-2"><strong>{{ product.name }}</strong></h6>
-						</div>
-			</div>
-		</div>
-		{% endfor %}
-	</div>
+        {% for product in featured_listings %}
+        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-3 mt-3">
+            <div class="card h-100 product-card">
+                {% if product.image %}
+                <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="{% url 'product_detail' product.id %}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}no-available-image.png" alt="{{ product.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body pb-0">
+                    <h6 class="mb-2"><strong>{{ product.name }}</strong></h6>
+                </div>
+                </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
