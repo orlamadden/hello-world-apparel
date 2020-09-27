@@ -96,6 +96,10 @@ body {
     z-index: 99999;
 }
 
+.bg-delivery {
+    background-color: var(--orange);
+}
+
 .custom-toast {
     overflow: visible;
 }
@@ -359,6 +363,11 @@ div.custom-form textarea,
 }
 
 @media (max-width: 767px) {
+
+    body {
+        background: url('https://hello-world-apparel.s3-eu-west-1.amazonaws.com/media/hero-image.jpg') no-repeat top center fixed;
+        background-size: cover;
+    }
 
     .website-cta {
         font-size: 2.6em;
