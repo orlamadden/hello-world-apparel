@@ -44,9 +44,9 @@
 						<p class="my-0">Unit price: €{{ item.product.price }}</p>
 						<p class="my-0">Total price: €{{ item.product.price | calc_subtotal:item.quantity }}</p>
 					</div>
-				    </div>
-					    <!-- user input for increasing/decreasing quantity, removing and updating items -->
-				    <div class="col-12 col-lg-4 mt-sm-4 pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left">
+				</div>
+				<!-- user input for increasing/decreasing quantity, removing and updating items -->
+				<div class="col-12 col-lg-4 mt-sm-4 pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left">
 					<form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
 						{% csrf_token %}
 						<div class="form-group">
@@ -79,7 +79,7 @@
 					<button class="btn update-link"><small><i class="fas fa-sync-alt"></i>Update</small></button>
 					<button class="btn remove-item float-right" id="remove_{{ item.item_id }}"
 					data-product_size="{{ item.size }}"><small><i class="far fa-trash-alt"></i>Remove</small></button>
-				    </div>
+				</div>
 		    </div>
             {% endfor %}
 		</div>

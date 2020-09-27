@@ -3,7 +3,12 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+
 def cart_contents(request):
+    """
+    view for handling contents
+    of the shopping cart
+    """
 
     cart_items =[]
     total = 0

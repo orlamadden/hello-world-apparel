@@ -4,11 +4,16 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, get_object
 
 
 def view_cart(request):
-    """ A view that renders the shopping cart """
+    """
+    A view that renders the shopping cart 
+    """
     return render(request, 'cart/cart.html')
 
 
 def add_to_cart(request, item_id):
+    """
+    A view that renders the shopping cart 
+    """
 
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -42,7 +47,10 @@ def add_to_cart(request, item_id):
 
 
 def adjust_cart(request, item_id):
-    """Adjust the quantity of the specified product to the specified amount"""
+    """
+    Adjust the quantity of the specified product 
+    to the specified amount
+    """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -73,7 +81,9 @@ def adjust_cart(request, item_id):
 
 
 def remove_from_cart(request, item_id):
-    """Remove the item from the shopping bag"""
+    """
+    Removes the item from the shopping cart
+    """
 
     try:
         product = get_object_or_404(Product, pk=item_id)
