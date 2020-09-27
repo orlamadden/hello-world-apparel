@@ -15,10 +15,7 @@
 		</li>
 
 		<li class="nav-item">
-			<a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link"
-				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				Most Popular
-			</a>
+			<a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=phone-cases" id="cases-link">Phone Cases</a>
 		</li>
 
 		<li class="nav-item dropdown">
@@ -34,9 +31,8 @@
 		</li>
 
 		<li class="nav-item">
-			<a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown"
-				aria-haspopup="true" aria-expanded="false">
-				On Sale
+			<a class="logo-font font-weight-bold nav-link text-black" href="{% url 'products' %}?category=stickers">
+				Stickers
 			</a>
 		</li>
 	</ul>
