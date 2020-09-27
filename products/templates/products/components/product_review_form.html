@@ -1,4 +1,6 @@
 <div class="container mt-2 d-flex justify-content-center">
+<!-- below code for reviews is sourced from a past student, this is referenced in credits
+section in the the README.md -->
     <div class="product-detail-wrapper">  
         <div class="row">
             <div class="col-12">
@@ -13,16 +15,15 @@
                         {% if reviews %}
                         {% for review in reviews %}
                         <div class="review-container mt-3">
-                                    <h5 class="font-weight-bold"><i class="fas fa-user mr-2"></i>{{review.user}}</h5>
-                                <p class="">{{review.comment}}</p>
-                                <p class="">{{ review.rating|floatformat:0 }}/5</p>
-                                {% if review.user == request.user %}
-                                <div class="button-wrapper pb-5">
-                                    <a class="btn orange-btn text-white " href="{% url 'edit_review' product.id %}" aria-label="edit button">Edit</a>
-                                    <a class="btn" href="{% url 'delete_review' product.id %}" aria-label="delete button">Delete</a> 
-                                </div>
+                            <h5 class="font-weight-bold"><i class="fas fa-user mr-2"></i>{{review.user}}</h5>
+                            <p class="">{{review.comment}}</p>
+                            <p class="">{{ review.rating|floatformat:0 }}/5</p>
+                            {% if review.user == request.user %}
+                            <div class="button-wrapper pb-5">
+                                <a class="btn orange-btn text-white " href="{% url 'edit_review' product.id %" aria-label="edit button">Edit</a>
+                                <a class="btn" href="{% url 'delete_review' product.id %}" aria-label="deletebutton">Delete</a> 
+                            </div>
                             {% endif %}
-                            
                         </div>
                         {% endfor %}
                         {% else %}
@@ -46,9 +47,9 @@
                         </div>
                     </form>
                     {% elif review and not review_form %}
-                    <p class="">Thank you for reviewing this product, you can edit it in the reviews section</p>
+                    <p class="">Thank you for reviewing this product, you can edit it by clicking edit on the review</p>
                     {% else %}
-                    <p class="">Purchase this item to make a review.</p>
+                    <p class="">You must purchase this item to leave a review!</p>
                     {% endif %}
                     </div>
                 </div>

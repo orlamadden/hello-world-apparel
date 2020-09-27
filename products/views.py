@@ -164,7 +164,9 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the store """
+    """
+    Delete a product from the store
+    """
 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
@@ -179,6 +181,7 @@ def delete_product(request, product_id):
 def add_review(request, product_id):
     """
     View to handle the POST of reviews from a specific user
+    to a particular product
     """
     user = get_object_or_404(UserProfile, user=request.user)
     product = get_object_or_404(Product, pk=product_id)

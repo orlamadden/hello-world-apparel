@@ -6,7 +6,9 @@ Customises what fields to display in
 the Product admin dashboard
 """
 class ProductAdmin(admin.ModelAdmin):
-    # what fields to display
+    """
+    what product fields to display 
+    """
     list_display = (
         'name',
         'category',
@@ -22,7 +24,9 @@ Customises what fields to display in
 the Category admin dashboard
 """
 class CategoryAdmin(admin.ModelAdmin):
-    # what fields to display
+    """
+    what category fields to display 
+    """
     list_display = (
         'friendly_name',
         'name',
@@ -31,7 +35,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class ReviewAdmin(admin.ModelAdmin):
     """
-    To display the below fields to the Review admin panel.
+    what review fields to display.
+    Review code source referenced in README.md
     """
     list_display = (
         'user',

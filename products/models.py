@@ -34,7 +34,9 @@ class Product(models.Model):
 
 class Review(models.Model):
     """
-    Model to define the fields required to add a review to a product
+    Model to define the fields required to add 
+    a review to a product. Review code source referenced
+    in README.md
     """
     product = models.ForeignKey(Product, on_delete=models.CASCADE,
                                 null=True, blank=True, related_name="reviews")
