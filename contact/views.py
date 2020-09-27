@@ -8,10 +8,10 @@ import os
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 
 
-# Function Views
 def contact(request):
     """
-    Render contact template and contact form.
+    Renders contact template and contact 
+    form.
     """
     if request.method == 'POST':
         if request.user.is_authenticated:
@@ -32,16 +32,16 @@ def contact(request):
 
         # Send Email
         send_mail(
-            'New Contact Form',
+            'New Form Submission',
             'Hi Admin,\n\nYou have a new contact message. Sign '
-            'into the admin panel to view.\nDo not reply to this '
-            'mail.\n\nRegards,\nHello World Apparel',
+            'into the admin panel to view.\n\nRegards,'
+            'n\nHello World Apparel',
             'helloworldapparel@gmail.com',
             [EMAIL_HOST_USER],
             fail_silently=True
         )
 
-        messages.success(request, 'Contact form sent. We will be in touch.')
+        messages.success(request, 'Contact form successfully submitted. We will be in touch!')
         return redirect(reverse('contact_success'))
 
     context = {

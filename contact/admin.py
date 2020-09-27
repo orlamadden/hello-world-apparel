@@ -19,7 +19,7 @@ class ContactAdmin(admin.ModelAdmin):
 
     list_per_page = 25
     
-    # orders inventory by date
+    # orders contacts by date
     ordering = ('contact_date',)
 
 
