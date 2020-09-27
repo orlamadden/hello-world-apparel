@@ -121,3 +121,7 @@ When I was trying to submit my form, I got a notification below my Stripe paymen
 #### No email showing in terminal
 
 After setting up a confirmation email for users when the purchase an order, the order confirmation would not print in the terminal during testing. I was receiving the error `django.core.mail.message.BadHeaderError: Header values can't contain newlines (got '  \nOrder E4826FA59CF94B84BC8145FAC7156FFA confirmed' for header 'Subject')` in the terminal when I made a test purchase. This solution on [Stack Overflow](https://stackoverflow.com/questions/55903845/badheadererror-with-python-emails-package-how-to-fix) helped me identify that the issue was a spacing error. After fixing this, the confirmation email was visible in the terminal.
+
+#### Cart summary page not rendering correctly on iPad or mobile devices
+
+During the testing of responsiveness of Hello World Apparel, it was pointed out by one of the users that the checkout page was slightly off. I added Bootstrap columns that assisted with rendering the information correctly on tablet and mobile devices. Due to the late notification of this issue, the update and remove buttons are slightly wonky when rendered on mobile device. The buttons are fully functional, this layout issue will be fixed in a future update.
