@@ -652,6 +652,17 @@ SOCIALACCOUNT_PROVIDERS = \
  - FAQ page referenced from [Teefury](https://teefury.com/apps/help-center#hc-can-i-make-a-change-to-my-order-or-cancel-it).
  - Privacy policy page referenced from Asos and Teefury (links above).
  - All other text content was written by me.
+
+ ### Acknowledgements
+
+Massive thanks to my family and friends for helping with testing this project, and my past projects throughout the duration of this course.
+
+The CI Slack community have been an incredible source of inspiration and help since day 1. I look forward to staying in touch with the community when the course ends.
+
+I would like to thank my mentor, Antonio Rodriquez for his support throughout the course.
+
+This course has been a challenge, and I am very much looking forward to working on new projects in the future with the knowledge I have. I am sad to be finishing the course, but excited for all the possibilities that programming gives you.
+
  --------
 
 For educational purposes only.
