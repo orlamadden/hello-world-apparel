@@ -6,9 +6,10 @@
 
 ## Table of Contents
 
-[User Stories Testing](#user-stories-testing)
-[Manual Testing](#manual-testing)
-[Bugs](#bugs)
+1. [User Stories Testing](#user-stories-testing)
+2. [Manual Testing](#manual-testing)
+    - [**Code Validation**](#code-validation)
+3. [Bugs](#bugs)
 
 ---
 ## User Stories Testing
@@ -27,6 +28,7 @@ As a user of the site I want and/or expect:
 - all users were able to successfully create an account :white_check_mark:
 - 1 user used their Facebook login credentials to sign up :white_check_mark:
 4. to view ratings on a product to aid in my decision making
+- ADD RATING
 5. to contact the company
 - all users found the contact page :white_check_mark:
 - all users successfully submitted a contact forms :white_check_mark:
@@ -102,9 +104,9 @@ Desktop:
 - 'template literal syntax' is only available in ES6 (use 'esversion: 6').
 - Other than the comments above, no issues were found.
 
-[Python PEP8]((http://pep8online.com/
+[Python PEP8]((http://pep8online.com/)
 
-- Numerous trailing white spaces found throughout all `.py` files.
+- Numerous trailing white spaces found throughout all `.py` files. These were fixed.
 
 ## Bugs
 
