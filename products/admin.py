@@ -11,6 +11,7 @@ class ProductAdmin(admin.ModelAdmin):
         'name',
         'category',
         'price',
+        'sku',
     )
     
     # orders inventory a-z by name
