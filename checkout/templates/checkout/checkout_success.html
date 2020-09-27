@@ -20,7 +20,7 @@
 		<div class="col">
 			<h2 class="font-weight-bold mt-4 mb-4">Thank you for your order!</h2>
 			<p class="text-black">Your order information is below. A confirmation email will be sent to
-				<strong>{{ order.email }}</strong>.</p>
+			<strong>{{ order.email }}</strong>.</p>
 		</div>
 	</div>
 	<!-- order confirmation -->
@@ -79,7 +79,6 @@
 							<small class="text-muted">Delivering To:</small>
 						</div>
 					</div>
-
 					<div class="row">
 						<div class="col-12 col-md-4">
 							<p class="mb-0 text-black font-weight-bold">Full Name</p>
@@ -88,7 +87,6 @@
 							<p class="mb-0">{{ order.full_name }}</p>
 						</div>
 					</div>
-
 					<div class="row">
 						<div class="col-12 col-md-4">
 							<p class="mb-0 text-black font-weight-bold">Address 1</p>
@@ -97,7 +95,6 @@
 							<p class="mb-0">{{ order.street_address1 }}</p>
 						</div>
 					</div>
-
 					{% if order.street_address2 %}
 					<div class="row">
 						<div class="col-12 col-md-4">
@@ -108,7 +105,6 @@
 						</div>
 					</div>
 					{% endif %}
-
 					{% if order.county %}
 					<div class="row">
 						<div class="col-12 col-md-4">
@@ -119,7 +115,6 @@
 						</div>
 					</div>
 					{% endif %}
-
 					<div class="row">
 						<div class="col-12 col-md-4">
 							<p class="mb-0 text-black font-weight-bold">Town or City</p>
@@ -128,7 +123,6 @@
 							<p class="mb-0">{{ order.town_or_city }}</p>
 						</div>
 					</div>
-
 					{% if order.postcode %}
 					<div class="row">
 						<div class="col-12 col-md-4">
@@ -139,7 +133,6 @@
 						</div>
 					</div>
 					{% endif %}
-
 					<div class="row">
 						<div class="col-12 col-md-4">
 							<p class="mb-0 text-black font-weight-bold">Country</p>
@@ -148,7 +141,6 @@
 							<p class="mb-0">{{ order.country }}</p>
 						</div>
 					</div>
-
 					<div class="row">
 						<div class="col-12 col-md-4">
 							<p class="mb-0 text-black font-weight-bold">Phone Number</p>

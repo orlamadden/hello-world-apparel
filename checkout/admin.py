@@ -4,11 +4,13 @@ from .models import Order, OrderLineItem
 # Register your models here.
 
 class OrderLineItemAdminInline(admin.TabularInline):
+    """
+    Display order line item information in the admin panel.
+    """
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
 
 class OrderAdmin(admin.ModelAdmin):
-
     """
     Display order information in the admin panel.
     """
