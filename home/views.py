@@ -4,7 +4,10 @@ from products.models import Product
 # Create your views here.
 
 def index(request):
-    """ homepage view """
+    """ 
+    renders homepage view and
+    featured listings
+    """
     
     featured_products = Product.objects.filter(featured=True).order_by('?')[:6]
 
