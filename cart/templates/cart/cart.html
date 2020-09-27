@@ -25,71 +25,65 @@
 				<span class="font-weight-bold">Products</span>
 				<a href="{% url 'products' %}"><i class="fas fa-arrow-left mr-2"></i>Continue shopping</a>
 			</h2>
-
 			{% for item in cart_items %}
-			<div class="d-sm-flex justify-content-between my-4 pb-4 border-bottom">
-				<div class="media d-block d-sm-flex text-center text-sm-left">
-					<div class="cart-item-thumb mx-auto mr-sm-4">
-						{% if item.product.image %}
-						<img class="img-fluid rounded" width="250" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-                                    {% else %}
-						<img class="img-fluid rounded" src="{{ MEDIA_URL }}no-image-available.jpg" alt="{item.product.name }}">
-                                    {% endif %}
-                            </div>
-						<div class="media-body pt-3">
-							<p class="my-0"><strong>{{ item.product.name }}</strong></p>
-							<p class="my-0">
-								<strong>Size: </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}
-							</p>
-							<p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
-							<p class="my-0">Unit price: €{{ item.product.price }}</p>
-							<p class="my-0">Total price: €{{ item.product.price | calc_subtotal:item.quantity }}</p>
-						</div>
+		    <div class="row d-lg-flex justify-content-between my-4 pb-4 border-bottom">
+			    <div class="col-12 col-lg-8 media d-block d-sm-flex text-center text-sm-left">
+				<div class="cart-item-thumb mx-auto mr-sm-4">
+					{% if item.product.image %}
+					<img class="img-fluid rounded" width="250" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                    {% else %}
+					<img class="img-fluid rounded" src="{{ MEDIA_URL }}no-image-available.jpg" alt="{item.product.name }}">
+                    {% endif %}
+                    </div>
+					<div class="media-body pt-3">
+						<p class="my-0"><strong>{{ item.product.name }}</strong></p>
+						<p class="my-0">
+							<strong>Size: </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}
+					    </p>
+						<p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+						<p class="my-0">Unit price: €{{ item.product.price }}</p>
+						<p class="my-0">Total price: €{{ item.product.price | calc_subtotal:item.quantity }}</p>
 					</div>
-					<!-- user input for increasing/decreasing quantity, removing and updating items -->
-					<div class="pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left">
-						<form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
-							{% csrf_token %}
-							<div class="form-group">
-								<div class="input-group">
-									<div class="input-group-prepend">
-										<button class="decrement-qty btn btn-sm btn-black rounded-0"
-                                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                                                            <span>
-                                                                <i class="fas fa-minus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-									</div>
-									<input class="form-control form-control-sm qty_input" type="number"
-                                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                                        data-item_id="{{ item.item_id }}"
-                                                        id="id_qty_{{ item.item_id }}">
-									<div class="input-group-append">
-										<button class="increment-qty btn btn-sm btn-black rounded-0"
-                                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                                            <span>
-                                                                <i class="fas fa-plus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-									</div>
-									{% if item.product.has_sizes %}
-									<input type="hidden" name="product_size" value="{{ item.size }}">
-                                                    {% endif %}
-                                                </div>
+				    </div>
+					    <!-- user input for increasing/decreasing quantity, removing and updating items -->
+				    <div class="col-12 col-lg-4 mt-sm-4 pt-2 pt-sm-0 pl-sm-3 mx-auto mx-sm-0 text-center text-sm-left">
+					<form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
+						{% csrf_token %}
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<button class="decrement-qty btn btn-sm orange-btn text-white rounded-0" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                        <span>
+                                            <i class="fas fa-minus fa-sm"></i>
+                                        </span>
+                                    </button>
 								</div>
-						</form>
-						<button class="btn update-link"><small><i class="fas fa-sync-alt"></i>Update</small></button>
-						<button class="btn remove-item float-right" id="remove_{{ item.item_id }}"
-							data-product_size="{{ item.size }}"><small><i class="far fa-trash-alt"></i>Remove</small></button>
-					</div>
-				</div>
-
-
-
-				{% endfor %}
-			</div>
-
-			<div class="col-xl-3 col-md-4 pt-3 pt-md-0">
+								<input class="form-control form-control-sm qty_input" type="number"
+                                    name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                    data-item_id="{{ item.item_id }}"
+                                    id="id_qty_{{ item.item_id }}">
+								<div class="input-group-append">
+									<button class="increment-qty btn btn-sm orange-btn text-white rounded-0"
+                                        data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                        <span>
+                                            <i class="fas fa-plus fa-sm"></i>
+                                        </span>
+                                    </button>
+								</div>
+								{% if item.product.has_sizes %}
+								<input type="hidden" name="product_size" value="{{ item.size }}">
+                                {% endif %}
+                                </div>
+						</div>
+					</form>
+					<button class="btn update-link"><small><i class="fas fa-sync-alt"></i>Update</small></button>
+					<button class="btn remove-item float-right" id="remove_{{ item.item_id }}"
+					data-product_size="{{ item.size }}"><small><i class="far fa-trash-alt"></i>Remove</small></button>
+				    </div>
+		    </div>
+            {% endfor %}
+		</div>
+		<div class="col-xl-3 col-md-4 pt-3 pt-md-0">
 				<h2 class="h6 px-4 py-3 summary-header font-weight-bold">Order Summary</h2>
 				<div class="cart-summary">
 					<h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
@@ -110,14 +104,13 @@
                 <img src="https://hello-world-apparel.s3-eu-west-1.amazonaws.com/media/fast-shipping.png" class="img-fluid" width="100" alt="">
                 
                 </div>
-			</div>
-			{% else %}
-			<p class="lead mb-5">Your cart is empty.</p>
-			<a href="{% url 'products' %}" class="btn orange-btn rounded-4 btn-lg">
-				<span class="text-white">Keep Shopping</span>
-			</a>
-			{% endif %}
 		</div>
+		{% else %}
+		<p class="lead mb-5">Your cart is empty.</p>
+		<a href="{% url 'products' %}" class="btn orange-btn rounded-4 btn-lg">
+			<span class="text-white">Keep Shopping</span>
+		</a>
+		{% endif %}
 	</div>
 </div>
 {% endblock %}
