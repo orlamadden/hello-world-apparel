@@ -181,7 +181,8 @@ def delete_product(request, product_id):
 def add_review(request, product_id):
     """
     View to handle the POST of reviews from a specific user
-    to a particular product
+    to a particular product. Code for review sourced from
+    past CI student, referenced in README.md
     """
     user = get_object_or_404(UserProfile, user=request.user)
     product = get_object_or_404(Product, pk=product_id)
