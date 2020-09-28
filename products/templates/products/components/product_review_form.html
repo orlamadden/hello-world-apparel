@@ -11,7 +11,7 @@ section in the the README.md -->
             <div class="col-lg-6">
                 <div class="reviews">
                     <div class="review-list">
-                    <h4 class="">Customer Reviews</h4>
+                    <h4 class="font-weight-bold">Customer Reviews</h4>
                         {% if reviews %}
                         {% for review in reviews %}
                         <div class="review-container mt-3">
@@ -21,7 +21,7 @@ section in the the README.md -->
                             {% if review.user == request.user %}
                             <div class="button-wrapper pb-5">
                                 <a class="btn orange-btn text-white " href="{% url 'edit_review' product.id %" aria-label="edit button">Edit</a>
-                                <a class="btn" href="{% url 'delete_review' product.id %}" aria-label="deletebutton">Delete</a> 
+                                <a class="btn" href="{% url 'delete_review' product.id %}" aria-label="delete button">Delete</a> 
                             </div>
                             {% endif %}
                         </div>
