@@ -187,9 +187,11 @@ body {
 }
 
 .review-container {
-    border: 1px solid rgb(216, 216, 216);
-    border-radius: 4px;
     padding: 20px;
+}
+
+.leave-review textarea {
+    margin-bottom: 15px;
 }
 
 /* cart section */

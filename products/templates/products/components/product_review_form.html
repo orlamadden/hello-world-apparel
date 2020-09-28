@@ -11,11 +11,11 @@ section in the the README.md -->
             <div class="col-lg-6">
                 <div class="reviews">
                     <div class="review-list">
-                    <h4 class="font-weight-bold">Customer Reviews</h4>
+                    <h5 class="font-weight-bold mt-2">Customer Reviews</h5>
                         {% if reviews %}
                         {% for review in reviews %}
                         <div class="review-container mt-3">
-                            <h5 class="font-weight-bold"><i class="fas fa-user mr-2"></i>{{review.user}}</h5>
+                            <h6 class="font-weight-bold"><i class="fas fa-user mr-2"></i>{{review.user}}</h6>
                             <p class="">{{review.comment}}</p>
                             <p class="">{{ review.rating|floatformat:0 }}/5</p>
                             {% if review.user == request.user %}
