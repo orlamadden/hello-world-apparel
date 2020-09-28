@@ -193,6 +193,10 @@ This section will outline all the features of Hello World Apparel implemented by
 - When users click on a product card, they are taken to the details page of the selected product.
 - If a super user is logged in, they have easy access to edit or delete a product.
 
+#### Delete modal 
+- When the super user is logged in, they have the option to delete a product from the product listings.
+- A modal displays as an extra layer of defensive design when the super user clicks delete, to make sure that they want to delete this listing from the store.
+
 ### :page_facing_up: Product details page
 
 #### Listing details

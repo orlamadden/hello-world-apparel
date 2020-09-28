@@ -116,27 +116,8 @@
 										{% if request.user.is_superuser %}
 										<small class="ml-3 mb-2">
                                             <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                            <a class="text-danger" data-toggle="modal" data-target="#delete-modal" href="{% url 'delete_product' product.id %}">Delete</a>
+                                            <a class="text-danger" data-toggle="modal" data-target="#exampleModal" href="{% url 'delete_product' product.id %}">Delete</a>
                                         </small>
-                                        <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="delete-modal" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="delete-modal-label">Hold on!</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                You are about to delete <span class="font-weight-bold">{{ product.name }}</span>. Do you want to proceed?
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                <button type="button" href="{% url 'delete_product' product.id %}" class="btn orange-btn text-white">Yes, delete</button>
-                                            </div>
-                                            </div>
-                                        </div>
-                                        </div>
 										{% endif %}
 							</div>
 						</div>
