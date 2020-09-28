@@ -16,8 +16,8 @@ section in the the README.md -->
                         {% for review in reviews %}
                         <div class="review-container mt-3">
                             <h6 class="font-weight-bold"><i class="fas fa-user mr-2"></i>{{review.user}}</h6>
-                            <p class="">{{review.comment}}</p>
-                            <p class="">{{ review.rating|floatformat:0 }}/5</p>
+                            <p>{{review.comment}}</p>
+                            <p>{{ review.rating|floatformat:0 }}/5</p>
                             {% if review.user == request.user %}
                             <div class="button-wrapper pb-5">
                                 <a class="btn orange-btn text-white " href="{% url 'edit_review' product.id %" aria-label="edit button">Edit</a>
@@ -35,7 +35,7 @@ section in the the README.md -->
             <div class="col-lg-6 mt-sm-5 mt-lg-0">
                 <div class="reviews">
                     <div class="leave-review">
-                    <h4 class="">Leave a review</h4>
+                    <h5 class="font-weight-bold mt-2">Leave a review</h5>
                     {% if review_form  %}
                     <form action="{% url 'add_review' product.id %}" method="POST">
                         <div class="col-12 mt-3">
@@ -47,9 +47,9 @@ section in the the README.md -->
                         </div>
                     </form>
                     {% elif review and not review_form %}
-                    <p class="">Thank you for reviewing this product, you can edit it by clicking edit on the review</p>
+                    <p>Thank you for reviewing this product, you can edit it by clicking edit on the review</p>
                     {% else %}
-                    <p class="">You must purchase this item to leave a review!</p>
+                    <p>You must purchase this item to leave a review!</p>
                     {% endif %}
                     </div>
                 </div>
