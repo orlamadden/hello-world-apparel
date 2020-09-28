@@ -7,11 +7,19 @@
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row mt-4 mb-4">
-            <div class="col"></div>
-        </div>
-    </div>
+ <div class="container header-container">
+	<div class="row mt-4 mb-4">
+		<div class="col-12">
+			<div id="breadcrumbs">
+				<a class="category-text" href="{% url 'home' %}">Home </a>
+				<span class="ml-2">/</span>
+                <a class="category-text" href="{% url 'view_cart' %}">Shopping Cart </a>
+				<span class="ml-2">/</span>
+                <span class="category-text ml-2 font-weight-bold">Checkout </span>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -56,7 +64,7 @@
                 {% endfor %}
                 <hr>
                 <div class="row text-black text-right">
-                    <div class="col-7 offset-2">
+                    <div class="col-7 offset-1">
                         <p class="my-0 mt-2">Order Total:</p>
                         <p class="my-0 mt-2">Delivery:</p>
                         <h4 class="font-weight-bold my-0 mt-3">Grand Total:</h4>

@@ -5,7 +5,13 @@
 {% block page_header %}
 <div class="container header-container">
 	<div class="row mt-4 mb-4">
-		<div class="col"></div>
+		<div class="col-12">
+			<div id="breadcrumbs">
+				<a class="category-text" href="{% url 'home' %}">Home </a>
+				<span class="ml-2">/</span>
+                <span class="category-text ml-2 font-weight-bold">Shopping Cart </span>
+			</div>
+		</div>
 	</div>
 </div>
 {% endblock %}

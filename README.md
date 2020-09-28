@@ -654,7 +654,7 @@ SOCIALACCOUNT_PROVIDERS = \
  ### Content
  - Terms and conditions page referenced from [Asos](https://www.asos.com/terms-and-conditions/).
  - FAQ page referenced from [Teefury](https://teefury.com/apps/help-center#hc-can-i-make-a-change-to-my-order-or-cancel-it).
- - Privacy policy page referenced from Asos and Teefury (links above).
+ - Privacy policy page referenced from [Cleverbox](https://www.cleverbox.co.uk/example-privacy-policy/) and [Teepublic](https://www.teepublic.com/privacy_policy).
  - All other text content was written by me.
 
  ### Acknowledgements
