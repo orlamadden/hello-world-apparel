@@ -1,3 +1,5 @@
+![https://res.cloudinary.com/orla2020/image/upload/v1601324611/ms4/ms4-readme-hero_w47deq.jpg](https://res.cloudinary.com/orla2020/image/upload/v1601324611/ms4/ms4-readme-hero_w47deq.jpg)
+
 # Hello World Apparel
 
 Hello World Apparel is the final project built for grading for the Code Institute. It is an ecommerce store that combines front-end and back-end frameworks. The platform that was built to sell high-quality apparel and products that primarily sells t-shirts, mugs, pins, pillows and masks. The store contains designs that I myself have created and sold over the past 5 years. Eventually I would like to use this website as a starting point to flesh out and make it available to the public to buy products I have created.
