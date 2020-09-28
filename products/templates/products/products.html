@@ -116,48 +116,13 @@
 										{% if request.user.is_superuser %}
 										<small class="ml-3 mb-2">
                                             <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                            <a class="text-danger" data-toggle="modal" data-target="#exampleModal" href="{% url 'delete_product' product.id %}">Delete</a>
+                                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                         </small>
 										{% endif %}
 							</div>
 						</div>
 						{% endfor %}
 					</div>
-					<nav aria-label="pagination for product listings">
-						{% if products.has_other_pages %}
-						<ul class="pagination justify-content-end">
-							{% if products.has_previous %}
-							<li class="page-item">
-								<a href="?page={{ products.previous_page_number }}" class="page-link">&laquo;</a>
-							</li>
-							{% else %}
-							<li class="page-item disabled">
-								<a href="" class="page-link">&laquo;</a>
-							</li>
-							{% endif %}
-							{% for i in products.paginator.page_range %}
-							{% if products.number == i %}
-							<li class="page-item active">
-								<a class="page-link">{{ i }}</a>
-							</li>
-							{% else %}
-							<li class="page-item">
-								<a href="?page={{ i }}" class="page-link">{{ i }}</a>
-							</li>
-							{% endif %}
-							{% endfor %}
-                            {% if products.has_next %}
-							<li class="page-item">
-								<a href="?page={{ products.next_page_number }}" class="page-link">&raquo;</a>
-							</li>
-							{% else %}
-							<li class="page-item disabled">
-								<a href="" class="page-link">&raquo;</a>
-							</li>
-							{% endif %}
-						</ul>
-						{% endif %}
-					</nav>
 				</div>
 			</div>
 		</div>
