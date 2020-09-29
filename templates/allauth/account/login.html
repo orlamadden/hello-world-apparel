@@ -10,7 +10,7 @@
 <div class="row mt-3">
 	<div class="col-sm-12 text-center">
 		<p>
-			<h2 class="logo-font mb-4">{% trans "Login" %}</h2>
+			<h2 class="font-weight-bold mb-4">{% trans "Login" %}</h2>
 		</p>
 	</div>
 </div>
@@ -23,10 +23,10 @@
 			{{ form.as_p }}
 			{% if redirect_field_value %}
 			<input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-    {% endif %}
-				<button class="primaryAction" type="submit">{% trans "Login" %}</button>
-				<a class="button secondaryAction ml-3"
-					href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+            {% endif %}
+			<button class="primaryAction" type="submit">{% trans "Login" %}</button>
+			<a class="button secondaryAction ml-3"
+				href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
 			</form>
 
 		</div>
