@@ -17,12 +17,12 @@ To test the website's checkout functionality, use the following payment credenti
 1. [**UX**](#ux)
     - [**Business goals**](#business-goals)
     - [**User Stories**](#user-stories)
+    - [**Wireframes**](#wireframes)
     - [**Design**](#design)
         - [**Font**](#font)
         - [**Colour Scheme**](#colour-scheme)
         - [**Images**](#images)
         - [**Icons**](#icons)
-    - [**Wireframes**](#wireframes)
 
 2. [**Features**](#features)
     - [**Current Features**](#current-features)
