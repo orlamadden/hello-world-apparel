@@ -418,36 +418,51 @@ User | user_id | User, null=True, on_delete=models.CASCADE | ForeignKey to User
 
 ### Languages
 
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [CSS](https://developer.mozilla.org/en-US/docs/Glossary/CSS)
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript)
-- [Python](https://www.python.org/about/)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - mark up language for all pages
+- [CSS](https://developer.mozilla.org/en-US/docs/Glossary/CSS) - styling the website
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript) - to handle Stripe processing
+- [Python](https://www.python.org/about/) - for back end logic
 
-### Libraries, Frameworks
+### Frameworks
 
-- [Django](https://www.djangoproject.com/)
-- [Bootstrap](https://getbootstrap.com/)
-- [Pillow](https://pillow.readthedocs.io/en/stable/)
-- [Gunicorn](https://gunicorn.org/)
-- [dj-database-url](https://pypi.org/project/dj-database-url/)
+- [Django](https://www.djangoproject.com/) - templating language to build the project
+- [Bootstrap](https://getbootstrap.com/) - for structuring the layout, look and feel of the website
+
+### Libraries
+
+- [sqlite3](https://www.sqlite.org/index.html) - database used in development automatically included with django
+- [PostgreSQL](https://www.postgresql.org/) - database used in production, installed to Heroku
+- [Pillow](https://pillow.readthedocs.io/en/stable/) - Python Imaging Library that adds support for opening, manipulating, and saving many different image file formats
+- [Gunicorn](https://gunicorn.org/) - Python WSGI HTTP Server for UNIX used to run Python web apps
+- [dj-database-url](https://pypi.org/project/dj-database-url/) 
 - [boto3](https://pypi.org/project/boto3/)
 - [django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
-- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - for styling forms
 - [psycopg2-binary](https://pypi.org/project/psycopg2-binary/)
 - [django-storages](https://django-storages.readthedocs.io/en/latest/)
 - [flake8](https://pypi.org/project/flake8/)
-- [Stripe](https://stripe.com/ie)
-- [PostgreSQL](https://www.postgresql.org/)
+- [Stripe](https://stripe.com/ie) - to handle payment
+- [asgiref](https://asgi.readthedocs.io/en/latest/) - a standard for Python web apps and servers to communicate with each other
+- [botocore](https://github.com/boto/botocore) - foundation for the AWS CLI as well as boto3
+- [django-countries](https://pypi.org/project/django-countries/) - provides country choices for use with forms, flag icons static files, and a country field for models
+- [docutils](https://pypi.org/project/docutils/) - processing documentation into useful formats, such as HTML or XML,
+- [jmespath](https://jmespath.org/) - JSON query language
+- [oauthlib](https://github.com/oauthlib/oauthlib) - handling OAuth requests
+- [python3-openid](https://pypi.org/project/python3-openid/) - supports use of the OpenID decentralized identity system
+- [pytz](https://pypi.org/project/pytz/) - allows accurate and cross platform timezone calculations
+- [requests-oauthlib](https://pypi.org/project/requests-oauthlib/) - OAuth library support for Requests
+- [s3transfer](https://pypi.org/project/s3transfer/) - managing Amazon S3 transfers
+- [sqlparse](https://pypi.org/project/sqlparse/) - SQL parser module
 
 ### Tools
 
-- [Gitpod](https://www.gitpod.io/)
-- [Font Awesome](https://fontawesome.com/)
-- [Google Fonts](https://fonts.google.com/)
-- [AWS S3](https://aws.amazon.com/)
-- [Balsamiq](https://balsamiq.com/)
-- [Git](https://git-scm.com/about)
-- [GitHub](https://github.com/)
+- [Gitpod](https://www.gitpod.io/) - IDE of choice for this project
+- [Font Awesome](https://fontawesome.com/) - icons used across the website
+- [Google Fonts](https://fonts.google.com/) - to import fonts 
+- [AWS S3](https://aws.amazon.com/) - to store external media and static files
+- [Balsamiq](https://balsamiq.com/) - to create wireframes for my project
+- [Git](https://git-scm.com/about) - for version control
+- [GitHub](https://github.com/) - remote storage of all code and project work
 
 ##### back to [top](#table-of-contents)
 ---
@@ -647,10 +662,11 @@ SOCIALACCOUNT_PROVIDERS = \
  - Without the amazing videos from the Code Institute and Chris Zielinski, this project would not have been possible. While every attempt has been made to make this website my own, some elements and code may remain the same, especially setting up Stripe.
  - This course from Brad Traversy was used for assisting in creating the Contact page - https://www.udemy.com/course/python-django-dev-to-deployment/learn/lecture/12056484#overview
  - Implementing the Facebook login was done with the help of this Youtube video - https://www.youtube.com/watch?v=kp1JINkOdTw
- - Review product implementation for my product details page and circular shopping cart counter icon was sourced and amended to meet my needs from CI student's (Stevo) [Github repository](https://github.com/nemixu/Milestone4/).
+ - Review product implementation for my product details page and circular shopping cart counter icon in the menu was sourced and amended to meet my needs from CI student's (Stevo) [Github repository](https://github.com/nemixu/Milestone4/).
 
  ### Media
- - Hero image mock up was downloaded from [here](https://mockupsforfree.com/down?q=Pillow%20On%20The%20Sofa%20Mockup). I used Photoshop to include my design on the pillow.
+ - Website hero image mock up was downloaded from [here](https://mockupsforfree.com/down?q=Pillow%20On%20The%20Sofa%20Mockup). I used Photoshop to include my design on the pillow.
+ - Mock up for README.md hero image was downloaded from [here](https://www.freepik.com/free-psd/website-template-laptop-screen_3383792.htm#page=1&query=website%20mockup&position=0) and I input my website image using Photoshop.
  - All product images were created by me in Phototshop.
 
  ### Content
@@ -661,14 +677,13 @@ SOCIALACCOUNT_PROVIDERS = \
 
  ### Acknowledgements
 
-Massive thanks to my family and friends for helping with testing this project, and my past projects throughout the duration of this course.
+Massive thanks to everyone who encouraged me throughout the course, and to all who helped with testing this project, and my past projects throughout the duration of this course. 
 
 The CI Slack community have been an incredible source of inspiration and help since day 1. I look forward to staying in touch with the community when the course ends.
 
 I would like to thank my mentor, Antonio Rodriquez for his support throughout the course.
 
-This course has been a challenge, and I am very much looking forward to working on new projects in the future with the knowledge I have. I am sad to be finishing the course, but excited for all the possibilities that programming gives you.
-
+This course has been a challenge, and I am very much looking forward to working on new projects in the future. I am excited for all the possibilities that programming can give.
  --------
 
-For educational purposes only.
+This project was built for grading at Code Institute.
