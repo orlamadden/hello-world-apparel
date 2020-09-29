@@ -684,6 +684,7 @@ The CI Slack community have been an incredible source of inspiration and help si
 I would like to thank my mentor, Antonio Rodriquez for his support throughout the course.
 
 This course has been a challenge, and I am very much looking forward to working on new projects in the future. I am excited for all the possibilities that programming can give.
- --------
+ 
+--------
 
 This project was built for grading at Code Institute.
